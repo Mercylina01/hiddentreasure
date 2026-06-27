@@ -1,67 +1,69 @@
 /* ============================================================
-   HIDDEN TREASURE PRIMARY SCHOOL MAYA
+   Hidden Treasure Children's Foundation
    Main Stylesheet — style.css
-   Green & Gold theme
-   Link this file in your HTML like this:
-   <link rel="stylesheet" href="css/style.css" />
+   Theme: Red, Blue & White
+   Author: Kuteesa Mercylina
+   Last updated: June 2026
    ============================================================ */
 
 
 /* ------------------------------------------------------------
-   1. CSS VARIABLES — colours, spacing, radius
+   1. CSS CUSTOM PROPERTIES (VARIABLES)
    ------------------------------------------------------------ */
 
 :root {
-  /* Green palette */
-  --green-900: #1a5c28;
-  --green-800: #14451f;
-  --green-700: #1a5c28;
-  --green-600: #217332;
-  --green-500: #278a3c;
-  --green-400: #3aab53;
-  --green-200: #a8dbb5;
-  --green-100: #d4f0db;
-  --green-50:  #eef8f1;
 
-  /* Gold palette */
-  --gold-900: #005a0e;
-  --gold-800: #7a4d00;
-  --gold-700: #9a6300;
-  --gold-600: #c07d00;
-  --gold-500: #e09400;
-  --gold-400: #f5aa00;
-  --gold-300: #f9c340;
-  --gold-200: #fcd97a;
-  --gold-100: #fdedb5;
-  --gold-50:  #fff8e1;
+  /* Blue scale */
+  --blue-900: #0a1f4d;
+  --blue-800: #0d2660;
+  --blue-700: #123380;
+  --blue-600: #1a44a8;
+  --blue-500: #2255cc;
+  --blue-400: #3a6de8;
+  --blue-200: #a3bcf5;
+  --blue-100: #d0dffb;
+  --blue-50:  #eef3fe;
+
+  /* Red scale */
+  --red-900: #5a0000;
+  --red-800: #7a0000;
+  --red-700: #9e0000;
+  --red-600: #c00000;
+  --red-500: #dd1111;
+  --red-400: #f03030;
+  --red-300: #f56060;
+  --red-200: #f9a0a0;
+  --red-100: #fdd4d4;
+  --red-50:  #fff2f2;
 
   /* Neutrals */
   --white:      #ffffff;
-  --off-white:  #f7fbf8;
-  --text-dark:  #0d1f12;
-  --text-muted: #4a6b55;
-  --border:     rgba(33, 115, 50, 0.15);
+  --off-white:  #f7f8fc;
+  --text-dark:  #0b1230;
+  --text-muted: #3d4f7a;
+  --border:     rgba(26, 68, 168, 0.15);
 
   /* Shadows */
-  --shadow:    0 4px 24px rgba(13, 46, 26, 0.11);
-  --shadow-lg: 0 12px 40px rgba(13, 46, 26, 0.17);
+  --shadow:    0 4px 24px rgba(10, 31, 77, 0.11);
+  --shadow-lg: 0 12px 40px rgba(10, 31, 77, 0.17);
 
   /* Border radius */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 18px;
 
-  /* Layout heights */
-  --topbar-height: 38px;
+  /* Layout */
   --header-height: 80px;
 }
 
 
 /* ------------------------------------------------------------
-   2. RESET & BASE STYLES
+   2. RESET & BASE
    ------------------------------------------------------------ */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -98,26 +100,29 @@ img {
   display: block;
 }
 
+button {
+  cursor: pointer;
+}
+
 
 /* ------------------------------------------------------------
-   3. TOP INFORMATION BAR
+   3. TOPBAR
    ------------------------------------------------------------ */
 
 .topbar {
-  background-color: var(--green-800);
-  height: var(--topbar-height);
-  display: flex;
-  align-items: center;
+  background-color: var(--blue-900);
+  padding: 8px 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .topbar-inner {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .topbar-left,
@@ -127,38 +132,36 @@ img {
   gap: 1.5rem;
 }
 
-.topbar-left span,
-.topbar-right span {
+.topbar span {
   font-size: 12px;
-  color: var(--green-100);
+  color: var(--blue-200);
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.topbar-left i,
-.topbar-right i {
+.topbar i {
   font-size: 13px;
-  color: var(--gold-300);
+  color: var(--red-300);
 }
 
 
 /* ------------------------------------------------------------
-   4. MAIN HEADER & NAVIGATION
+   4. HEADER & LOGO
    ------------------------------------------------------------ */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--green-900);
+  background-color: var(--blue-900);
   height: var(--header-height);
-  border-bottom: 2.5px solid var(--gold-400);
+  border-bottom: 3px solid var(--red-600);
   transition: box-shadow 0.3s ease;
 }
 
 .site-header.scrolled {
-  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.4);
 }
 
 .header-inner {
@@ -171,66 +174,52 @@ img {
   gap: 1rem;
 }
 
-/* School logo / crest */
 .header-logo {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  text-decoration: none;
 }
 
 .logo-crest {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background-color: var(--gold-400);
-  border: 2.5px solid var(--gold-200);
+  background-color: var(--red-600);
+  border: 2.5px solid var(--red-300);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: relative;
 }
 
 .crest-ht {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
-  color: var(--green-900);
-  position: relative;
-  z-index: 1;
-}
-
-.crest-ring {
-  display: none; 
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  color: var(--white);
 }
 
 .logo-name {
-  font-family: 'Playfair Display',  sans-serif;
-  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--gold-300);
+  color: var(--white);
   line-height: 1.1;
 }
 
 .logo-sub {
-  font-size: 12px;
-  color: var(--green-100);
-  letter-spacing: 0.3px;
+  font-size: 11px;
+  color: var(--blue-200);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.logo-motto {
-  display: none;
-}
 
-/* Main nav bar */
+/* ------------------------------------------------------------
+   5. NAVIGATION
+   ------------------------------------------------------------ */
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -239,34 +228,28 @@ img {
 }
 
 .nav-item {
-  color: var(--green-100);
+  color: var(--blue-100);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
   padding: 7px 11px;
   border-radius: var(--radius-sm);
+  border: none;
+  background: none;
   display: flex;
   align-items: center;
   gap: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
   white-space: nowrap;
-  border: none;
-  background: none;
-  font-family: 'Nunito', sans-serif;
-  text-decoration: none;
-}
-
-.nav-item i {
-  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .nav-item:hover,
 .nav-item.active {
-  background-color: rgba(245, 170, 0, 0.14);
-  color: var(--gold-300);
+  background-color: rgba(240, 48, 48, 0.15);
+  color: var(--red-300);
 }
 
-/* Dropdown menus */
+/* Dropdown */
 .nav-dropdown {
   position: relative;
 }
@@ -276,8 +259,8 @@ img {
   position: absolute;
   top: calc(100% + 6px);
   left: 0;
-  background-color: var(--green-800);
-  border: 1px solid rgba(245, 170, 0, 0.22);
+  background-color: var(--blue-800);
+  border: 1px solid rgba(240, 48, 48, 0.25);
   border-radius: var(--radius-md);
   padding: 6px;
   min-width: 210px;
@@ -293,64 +276,60 @@ img {
   display: block;
   padding: 8px 14px;
   font-size: 13px;
-  color: var(--green-100);
+  color: var(--blue-100);
   border-radius: var(--radius-sm);
-  transition: background-color 0.15s, color 0.15s;
   white-space: nowrap;
-  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(245, 170, 0, 0.13);
-  color: var(--gold-300);
+  background-color: rgba(240, 48, 48, 0.13);
+  color: var(--red-300);
 }
 
 /* Apply Now button */
 .apply-btn {
-  background-color: var(--gold-400);
-  color: var(--green-900);
+  background-color: var(--red-600);
+  color: var(--white);
   border: none;
   padding: 9px 20px;
   border-radius: var(--radius-md);
   font-family: 'Nunito', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  cursor: pointer;
   margin-left: 8px;
   transition: background-color 0.2s, transform 0.15s;
-  white-space: nowrap;
 }
 
 .apply-btn:hover {
-  background-color: var(--gold-300);
+  background-color: var(--red-500);
   transform: translateY(-1px);
 }
 
-/* Mobile hamburger button */
+/* Hamburger (mobile) */
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 6px;
   margin-left: auto;
   flex-shrink: 0;
 }
 
 .hamburger span {
+  display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--gold-300);
+  background-color: var(--red-300);
   border-radius: 2px;
-  display: block;
   transition: all 0.3s;
 }
 
 
 /* ------------------------------------------------------------
-   5. PAGE SYSTEM — show and hide sections
+   6. PAGE SHOW / HIDE SYSTEM
    ------------------------------------------------------------ */
 
 .page {
@@ -363,58 +342,86 @@ img {
 
 
 /* ------------------------------------------------------------
-   6. INNER PAGE HERO BANNER
-   Used on About, Staff, Curriculum, etc.
+   7. PAGE HERO BANNERS
    ------------------------------------------------------------ */
 
 .page-hero {
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 2rem 3.5rem;
   text-align: center;
+  background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle red tint overlay */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(220, 17, 17, 0.12) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .page-hero h1 {
   font-size: clamp(1.9rem, 4vw, 2.9rem);
   color: var(--white);
   margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero p {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 520px;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 540px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Red variant — used on Admissions & Anthem */
+.page-hero-red {
+  background: linear-gradient(135deg, var(--red-900), var(--red-700));
+}
+
+.page-hero-red::after {
+  background: linear-gradient(135deg, rgba(10, 31, 77, 0.2) 0%, transparent 60%);
 }
 
 
 /* ------------------------------------------------------------
-   7. HOME — HERO SECTION
+   8. SCRIPTURE BAND
    ------------------------------------------------------------ */
 
-   .hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.6);
-  object-position: center;
-  z-index: 0;
+.scripture-band {
+  background-color: var(--red-600);
+  padding: 1.1rem 2rem;
+  text-align: center;
 }
 
-/* Dark overlay so text stays readable over the video */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 1;
+.scripture-band p {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--white);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
+
+.scripture-band strong {
+  font-style: normal;
+  color: var(--red-100);
+  letter-spacing: 0.5px;
+}
+
+
+/* ------------------------------------------------------------
+   9. HOME — HERO SECTION
+   ------------------------------------------------------------ */
 
 .hero {
-  background-color: var(--green-900);
+  background-color: var(--blue-900);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -423,19 +430,37 @@ img {
   overflow: hidden;
 }
 
-/* Soft radial glow for depth */
-.hero-bg-overlay {
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 12, 40, 0.68);
+  z-index: 1;
+}
+
+.hero-bg-glow {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 75% 40%, rgba(245, 170, 0, 0.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 10% 80%, rgba(58, 171, 83, 0.09) 0%, transparent 45%);
+    radial-gradient(ellipse at 75% 40%, rgba(220, 17, 17, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(58, 109, 232, 0.10) 0%, transparent 45%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem 2rem;
@@ -450,42 +475,43 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background-color: rgba(245, 170, 0, 0.12);
-  border: 1px solid rgba(245, 170, 0, 0.3);
-  color: var(--gold-300);
+  background-color: rgba(240, 48, 48, 0.15);
+  border: 1px solid rgba(240, 48, 48, 0.35);
+  color: var(--red-300);
   padding: 6px 16px;
   border-radius: 30px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1.3rem;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
   color: var(--white);
-  line-height: 1.15;
-  margin-bottom: 0.75rem;
+  line-height: 1.12;
+  margin-bottom: 0.8rem;
 }
 
 .hero-title-accent {
-  color: var(--gold-400);
+  color: var(--red-400);
 }
 
-.hero-motto-text {
-  color: var(--green-200);
-  font-size: 14px;
+.hero-scripture {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
   font-style: italic;
-  border-left: 3px solid var(--gold-400);
+  color: var(--blue-200);
+  border-left: 3px solid var(--red-500);
   padding-left: 1rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .hero-desc {
   font-size: 14px;
-  color: var(--green-200);
+  color: var(--blue-200);
   line-height: 1.85;
   margin-bottom: 2rem;
   max-width: 480px;
@@ -497,30 +523,34 @@ img {
   flex-wrap: wrap;
 }
 
-/* Gold call-to-action button — reused across all pages */
+
+/* ------------------------------------------------------------
+   10. BUTTONS
+   ------------------------------------------------------------ */
+
+.btn-red,
 .btn-gold {
-  background-color: var(--gold-400);
-  color: var(--green-900);
+  background-color: var(--red-600);
+  color: var(--white);
   border: none;
   padding: 12px 26px;
   border-radius: var(--radius-md);
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 7px;
   transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
+.btn-red:hover,
 .btn-gold:hover {
-  background-color: var(--gold-300);
+  background-color: var(--red-500);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 170, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(200, 0, 0, 0.3);
 }
 
-/* Outline white button used in hero */
 .btn-outline-white {
   background: transparent;
   color: var(--white);
@@ -530,16 +560,37 @@ img {
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
 }
 
 .btn-outline-white:hover {
-  border-color: var(--gold-400);
-  color: var(--gold-300);
+  border-color: var(--red-400);
+  color: var(--red-300);
 }
 
-/* Hero crest visual on the right */
+.btn-sm-red {
+  background-color: var(--red-600);
+  color: var(--white);
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.btn-sm-red:hover {
+  background-color: var(--red-500);
+}
+
+
+/* ------------------------------------------------------------
+   11. HERO CREST VISUAL
+   ------------------------------------------------------------ */
+
 .hero-crest-visual {
   display: flex;
   justify-content: center;
@@ -551,7 +602,7 @@ img {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 3px solid var(--gold-400);
+  border: 3px solid var(--red-500);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,8 +612,8 @@ img {
   width: 236px;
   height: 236px;
   border-radius: 50%;
-  background-color: rgba(245, 170, 0, 0.07);
-  border: 1.5px solid rgba(245, 170, 0, 0.2);
+  background-color: rgba(240, 48, 48, 0.07);
+  border: 1.5px solid rgba(240, 48, 48, 0.22);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -573,62 +624,48 @@ img {
 
 .hero-crest-letters {
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
+  font-size: 52px;
   font-weight: 700;
-  color: var(--gold-400);
+  color: var(--red-400);
   line-height: 1;
 }
 
 .hero-crest-name {
   font-family: 'Playfair Display', serif;
-  font-size: 12px;
-  color: var(--green-200);
+  font-size: 11px;
+  color: var(--blue-200);
   margin-top: 6px;
   line-height: 1.4;
 }
 
 .hero-crest-divider {
-  width: 60px;
+  width: 50px;
   height: 2px;
-  background-color: var(--gold-400);
+  background-color: var(--red-500);
   border-radius: 1px;
-  margin: 10px auto;
+  margin: 9px auto;
 }
 
 .hero-crest-motto {
-  font-size: 11px;
-  color: var(--green-200);
+  font-size: 10px;
+  color: var(--blue-200);
   font-style: italic;
   line-height: 1.5;
 }
 
-.hero-crest-leaves {
-  position: absolute;
-  font-size: 2rem;
-  opacity: 0.3;
-}
 
-.hero-crest-leaf-l {
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%) scaleX(-1);
-}
+/* ------------------------------------------------------------
+   12. HERO STATS BAR
+   ------------------------------------------------------------ */
 
-.hero-crest-leaf-r {
-  right: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Stats strip at the bottom of the hero */
 .hero-stats-bar {
-  background-color: var(--gold-400);
+  background-color: var(--red-700);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-stat {
@@ -641,7 +678,7 @@ img {
 .hero-stat-div {
   width: 1px;
   height: 40px;
-  background-color: rgba(13, 46, 26, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
 }
 
@@ -649,24 +686,24 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--green-900);
+  color: var(--white);
 }
 
 .hs-lbl {
-  font-size: 11px;
-  color: var(--green-800);
+  font-size: 10px;
+  color: var(--red-100);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 
 /* ------------------------------------------------------------
-   8. WELCOME STRIP
+   13. WELCOME STRIP
    ------------------------------------------------------------ */
 
 .welcome-strip {
-  background-color: var(--green-700);
+  background-color: var(--blue-700);
   padding: 1.5rem 2rem;
 }
 
@@ -680,43 +717,24 @@ img {
 
 .ws-icon {
   font-size: 2rem;
-  color: var(--gold-300);
+  color: var(--red-300);
   flex-shrink: 0;
 }
 
 .welcome-strip-inner p {
   font-size: 14px;
-  color: var(--green-50);
+  color: var(--blue-50);
   line-height: 1.75;
   flex: 1;
 }
 
 .welcome-strip-inner strong {
-  color: var(--gold-200);
-}
-
-.btn-green-sm {
-  background-color: var(--gold-400);
-  color: var(--green-900);
-  border: none;
-  padding: 8px 18px;
-  border-radius: var(--radius-sm);
-  font-family: 'Nunito', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  flex-shrink: 0;
-  white-space: nowrap;
-  transition: background-color 0.2s;
-}
-
-.btn-green-sm:hover {
-  background-color: var(--gold-300);
+  color: var(--white);
 }
 
 
 /* ------------------------------------------------------------
-   9. GENERAL SECTION STYLES
+   14. GENERAL SECTION LAYOUT
    ------------------------------------------------------------ */
 
 .section {
@@ -726,26 +744,22 @@ img {
 }
 
 .bg-off {
-  background-color: var(--green-50);
-}
-
-.divider-section {
-  background-color: var(--green-50);
+  background-color: var(--blue-50);
 }
 
 /* Section heading elements */
 .sec-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: var(--green-600);
+  color: var(--red-600);
   margin-bottom: 0.4rem;
 }
 
 .sec-title {
   font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 0.4rem;
 }
 
@@ -757,11 +771,10 @@ img {
   margin-bottom: 2rem;
 }
 
-/* Gold underline bar */
-.gold-bar {
+.red-bar {
   width: 48px;
   height: 4px;
-  background-color: var(--gold-400);
+  background-color: var(--red-500);
   border-radius: 2px;
   margin: 0.6rem 0 1.5rem;
 }
@@ -786,7 +799,106 @@ img {
 
 
 /* ------------------------------------------------------------
-   10. FEATURE CARDS — Why Choose Us
+   15. BRANCH CARDS
+   ------------------------------------------------------------ */
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.branch-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.branch-card-header {
+  background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.branch-card-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(220, 17, 17, 0.15) 0%, transparent 70%);
+}
+
+.branch-card-header h3 {
+  font-size: 20px;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 4px;
+}
+
+.branch-card-header p {
+  font-size: 12px;
+  color: var(--blue-200);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.branch-card-body {
+  padding: 1.5rem;
+}
+
+.branch-badge {
+  display: inline-block;
+  background-color: var(--red-50);
+  color: var(--red-700);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.branch-card-body p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.branch-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.branch-meta li {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.branch-meta li i {
+  color: var(--blue-600);
+  font-size: 14px;
+}
+
+
+/* ------------------------------------------------------------
+   16. FEATURE CARDS
    ------------------------------------------------------------ */
 
 .features-grid {
@@ -805,7 +917,7 @@ img {
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
-/* Animated gold bottom border reveals on hover */
+/* animated red underline on hover */
 .feat-card::after {
   content: '';
   position: absolute;
@@ -813,7 +925,7 @@ img {
   left: 0;
   right: 0;
   height: 3px;
-  background-color: var(--gold-400);
+  background-color: var(--red-500);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -831,20 +943,20 @@ img {
 .feat-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--green-50);
-  border: 1px solid var(--green-100);
+  background-color: var(--blue-50);
+  border: 1px solid var(--blue-100);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  color: var(--green-700);
+  color: var(--blue-700);
   margin-bottom: 1rem;
 }
 
 .feat-card h3 {
   font-size: 16px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 7px;
 }
 
@@ -856,47 +968,59 @@ img {
 
 
 /* ------------------------------------------------------------
-   11. MOTTO BANNER
+   17. MOTTO BAND
    ------------------------------------------------------------ */
 
 .motto-band {
-  background-color: var(--gold-400);
+  background-color: var(--red-700);
   padding: 3rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+.motto-band::before {
+  content: '\201C';
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-60%);
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  pointer-events: none;
+}
+
 .motto-band-inner {
   max-width: 700px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .motto-band blockquote {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: var(--green-900);
+  color: var(--white);
   font-style: italic;
   line-height: 1.5;
-  position: relative;
-  z-index: 1;
 }
 
 .motto-band cite {
   display: block;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  color: var(--green-800);
+  color: var(--red-100);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
 
 /* ------------------------------------------------------------
-   12. QUICK LINKS GRID — Home page
+   18. QUICK LINKS GRID
    ------------------------------------------------------------ */
 
 .quicklinks-grid {
@@ -911,27 +1035,27 @@ img {
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .ql-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--gold-400);
+  border-color: var(--red-400);
 }
 
 .ql-ico {
   font-size: 28px;
-  color: var(--green-600);
+  color: var(--blue-600);
   margin-bottom: 4px;
 }
 
 .ql-card h3 {
   font-size: 16px;
-  color: var(--green-900);
+  color: var(--blue-900);
 }
 
 .ql-card p {
@@ -942,14 +1066,14 @@ img {
 
 .ql-arrow {
   font-size: 18px;
-  color: var(--gold-700);
+  color: var(--red-600);
   font-weight: 700;
   margin-top: 6px;
 }
 
 
 /* ------------------------------------------------------------
-   13. ABOUT PAGE
+   19. ABOUT PAGE
    ------------------------------------------------------------ */
 
 .two-col {
@@ -965,7 +1089,6 @@ img {
   line-height: 1.9;
 }
 
-/* Highlights list on right side of about story */
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -984,14 +1107,14 @@ img {
 
 .ah-item i {
   font-size: 24px;
-  color: var(--green-600);
+  color: var(--blue-600);
   flex-shrink: 0;
 }
 
 .ah-item strong {
   display: block;
   font-size: 14px;
-  color: var(--green-900);
+  color: var(--blue-900);
 }
 
 .ah-item span {
@@ -999,7 +1122,7 @@ img {
   color: var(--text-muted);
 }
 
-/* Directors layout */
+/* Directors */
 .directors-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1032,31 +1155,31 @@ img {
   font-size: 26px;
   font-weight: 700;
   flex-shrink: 0;
-  border: 3px solid var(--gold-300);
+  border: 3px solid var(--red-300);
 }
 
-.green-av {
-  background-color: var(--green-800);
-  color: var(--gold-300);
+.av-blue {
+  background-color: var(--blue-800);
+  color: var(--white);
 }
 
-.gold-av {
-  background-color: var(--gold-50);
-  color: var(--green-900);
+.av-red {
+  background-color: var(--red-50);
+  color: var(--blue-900);
 }
 
 .dir-body h3 {
   font-size: 19px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 3px;
 }
 
 .dir-role {
-  font-size: 12px;
-  color: var(--gold-700);
+  font-size: 11px;
+  color: var(--red-700);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   margin-bottom: 10px;
 }
 
@@ -1066,7 +1189,7 @@ img {
   line-height: 1.8;
 }
 
-/* Vision / Mission / Values cards */
+/* Vision / Mission / Values */
 .vmv-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1088,19 +1211,19 @@ img {
 .vmv-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--green-50);
+  background-color: var(--blue-50);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  color: var(--green-700);
+  color: var(--blue-700);
   margin-bottom: 1rem;
 }
 
 .vmv-card h3 {
   font-size: 17px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 8px;
 }
 
@@ -1117,21 +1240,21 @@ img {
 }
 
 .values-list li {
+  font-size: 13px;
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  color: var(--text-muted);
 }
 
 .values-list li i {
-  color: var(--green-500);
+  color: var(--red-500);
   font-size: 14px;
 }
 
 
 /* ------------------------------------------------------------
-   14. SCHOOL ANTHEM PAGE
+   20. ANTHEM PAGE
    ------------------------------------------------------------ */
 
 .anthem-layout {
@@ -1150,39 +1273,37 @@ img {
   overflow: hidden;
 }
 
-/* Large decorative music note */
+/* decorative music note in background */
 .anthem-card::before {
   content: '♪';
   position: absolute;
   right: 2rem;
   top: 1rem;
   font-size: 8rem;
-  color: var(--green-50);
+  color: var(--blue-50);
   line-height: 1;
   pointer-events: none;
 }
 
 .anthem-music-icon {
   font-size: 2rem;
-  color: var(--gold-400);
+  color: var(--red-500);
   margin-bottom: 1.5rem;
 }
 
-/* Verse blocks — green left border */
 .verse-block {
   margin-bottom: 1.5rem;
   padding: 1.25rem;
-  background-color: var(--green-50);
-  border-left: 4px solid var(--green-600);
+  background-color: var(--blue-50);
+  border-left: 4px solid var(--blue-600);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
-/* Chorus blocks — gold left border */
 .chorus-block {
   margin-bottom: 1.5rem;
   padding: 1.25rem;
-  background-color: var(--gold-50);
-  border-left: 4px solid var(--gold-400);
+  background-color: var(--red-50);
+  border-left: 4px solid var(--red-500);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
@@ -1191,12 +1312,12 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--green-600);
+  color: var(--blue-600);
   margin-bottom: 8px;
 }
 
 .chorus-lbl {
-  color: var(--gold-700);
+  color: var(--red-700);
 }
 
 .verse-block p,
@@ -1214,19 +1335,19 @@ img {
   gap: 8px;
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
-  background-color: var(--green-50);
+  background-color: var(--blue-50);
   border-radius: var(--radius-sm);
   font-size: 12px;
   color: var(--text-muted);
 }
 
 .anthem-note i {
-  color: var(--green-600);
   font-size: 16px;
+  color: var(--blue-600);
   flex-shrink: 0;
 }
 
-/* Anthem sidebar */
+/* Anthem sidebar cards */
 .anthem-sidebar {
   display: flex;
   flex-direction: column;
@@ -1243,7 +1364,7 @@ img {
 .anthem-info-card h4 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -1251,14 +1372,14 @@ img {
 }
 
 .anthem-info-card h4 i {
-  color: var(--green-600);
+  color: var(--blue-600);
 }
 
 .motto-display {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
   font-style: italic;
-  color: var(--green-800);
+  color: var(--blue-800);
   line-height: 1.4;
   margin-bottom: 4px;
 }
@@ -1284,21 +1405,9 @@ img {
   line-height: 1.4;
 }
 
-.green-chip {
-  background-color: var(--green-800);
-  color: var(--gold-300);
-}
-
-.gold-chip {
-  background-color: var(--gold-400);
-  color: var(--green-900);
-}
-
-.white-chip {
-  background-color: var(--white);
-  color: var(--green-900);
-  border: 1px solid var(--border);
-}
+.chip-blue  { background-color: var(--blue-800); color: var(--white); }
+.chip-red   { background-color: var(--red-600);  color: var(--white); }
+.chip-white { background-color: var(--white); color: var(--blue-900); border: 1px solid var(--border); }
 
 .when-list {
   display: flex;
@@ -1315,16 +1424,16 @@ img {
 }
 
 .when-list li i {
-  color: var(--green-500);
+  color: var(--red-500);
 }
 
 
 /* ------------------------------------------------------------
-   15. CURRICULUM PAGE
+   21. CURRICULUM PAGE
    ------------------------------------------------------------ */
 
 .curr-intro-band {
-  background-color: var(--green-800);
+  background-color: var(--blue-800);
   padding: 1.5rem 2rem;
 }
 
@@ -1338,15 +1447,15 @@ img {
 
 .curr-intro-inner p {
   font-size: 14px;
-  color: var(--green-100);
+  color: var(--blue-100);
   line-height: 1.85;
 }
 
 .curr-intro-inner strong {
-  color: var(--gold-200);
+  color: var(--white);
 }
 
-/* Nursery subject cards */
+/* Nursery grid */
 .curr-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -1371,12 +1480,12 @@ img {
 
 .curr-subject-card i {
   font-size: 26px;
-  color: var(--green-600);
+  color: var(--blue-600);
 }
 
 .curr-subject-card h4 {
   font-size: 14px;
-  color: var(--green-900);
+  color: var(--blue-900);
 }
 
 .curr-subject-card p {
@@ -1385,7 +1494,7 @@ img {
   line-height: 1.6;
 }
 
-/* Lower primary two-column layout */
+/* Lower primary layout */
 .cycle-layout {
   display: grid;
   grid-template-columns: 1.4fr 0.6fr;
@@ -1399,7 +1508,6 @@ img {
   gap: 8px;
 }
 
-/* Each subject row */
 .subj-row {
   background-color: var(--white);
   border: 1px solid var(--border);
@@ -1413,10 +1521,9 @@ img {
 }
 
 .subj-row strong {
-  color: var(--green-900);
+  color: var(--blue-900);
 }
 
-/* Subject type badges */
 .subj-badge {
   font-size: 10px;
   font-weight: 700;
@@ -1427,39 +1534,26 @@ img {
   margin-top: 2px;
 }
 
-.subj-badge.core {
-  background-color: var(--green-100);
-  color: var(--green-800);
-}
+.subj-badge.core   { background-color: var(--blue-100); color: var(--blue-800); }
+.subj-badge.faith  { background-color: var(--red-100);  color: var(--red-900); }
+.subj-badge.enrich { background-color: #e8e8ff; color: #3a3a8a; }
 
-.subj-badge.faith {
-  background-color: var(--gold-100);
-  color: var(--gold-900);
-}
-
-.subj-badge.enrich {
-  background-color: #e8e8ff;
-  color: #3a3a8a;
-}
-
-/* Lower primary tip card */
 .cycle-note-card {
-  background-color: var(--green-900);
+  background-color: var(--blue-900);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  color: var(--green-100);
 }
 
 .cycle-note-card h4 {
   font-size: 16px;
-  color: var(--gold-300);
+  color: var(--red-300);
   margin: 10px 0 8px;
 }
 
 .cycle-note-card p {
   font-size: 13px;
+  color: var(--blue-200);
   line-height: 1.75;
-  color: var(--green-200);
   margin-bottom: 12px;
 }
 
@@ -1471,18 +1565,19 @@ img {
 
 .cycle-note-card li {
   font-size: 13px;
+  color: var(--blue-200);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .cycle-note-card li i {
-  color: var(--gold-400);
+  color: var(--red-400);
   font-size: 14px;
 }
 
-/* Upper primary subject cards */
-.upper-layout .upper-subjects {
+/* Upper primary */
+.upper-subjects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
@@ -1504,19 +1599,19 @@ img {
 .us-icon {
   width: 44px;
   height: 44px;
-  background-color: var(--green-50);
+  background-color: var(--blue-50);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: var(--green-600);
+  color: var(--blue-600);
   margin-bottom: 10px;
 }
 
 .us-card h4 {
   font-size: 15px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 6px;
 }
 
@@ -1528,8 +1623,8 @@ img {
 
 .ple-badge {
   display: inline-block;
-  background-color: var(--green-100);
-  color: var(--green-800);
+  background-color: var(--blue-100);
+  color: var(--blue-800);
   font-size: 10px;
   font-weight: 700;
   padding: 3px 10px;
@@ -1537,9 +1632,9 @@ img {
   margin-top: 8px;
 }
 
-/* PLE prep highlight band */
+/* PLE prep band */
 .ple-prep-band {
-  background-color: var(--green-900);
+  background-color: var(--blue-900);
   border-radius: var(--radius-lg);
   padding: 2rem 2.5rem;
   margin-top: 2rem;
@@ -1555,13 +1650,13 @@ img {
 
 .ple-prep-text h3 {
   font-size: 20px;
-  color: var(--gold-300);
+  color: var(--red-300);
   margin-bottom: 8px;
 }
 
 .ple-prep-text p {
   font-size: 13px;
-  color: var(--green-200);
+  color: var(--blue-200);
   line-height: 1.75;
   max-width: 500px;
 }
@@ -1575,18 +1670,18 @@ img {
 .ple-stat {
   text-align: center;
   font-size: 12px;
-  color: var(--green-200);
+  color: var(--blue-200);
 }
 
 .ple-stat span {
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  color: var(--gold-400);
   font-weight: 700;
+  color: var(--red-400);
 }
 
-/* Co-curricular activity cards */
+/* Co-curricular */
 .cocurr-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1608,15 +1703,15 @@ img {
 }
 
 .cc-card i {
-  font-size: 30px;
-  color: var(--green-600);
   display: block;
+  font-size: 30px;
+  color: var(--blue-600);
   margin-bottom: 8px;
 }
 
 .cc-card h4 {
   font-size: 15px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 5px;
 }
 
@@ -1628,78 +1723,7 @@ img {
 
 
 /* ------------------------------------------------------------
-   16. STAFF PAGE
-   ------------------------------------------------------------ */
-
-.staff-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
-  gap: 16px;
-}
-
-.staff-card {
-  background-color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.staff-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.st-av {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 auto 12px;
-  border: 3px solid var(--gold-300);
-}
-
-/* Staff avatar colour variants */
-.sa1 { background-color: var(--green-800); color: var(--gold-300); }
-.sa2 { background-color: var(--green-700); color: var(--gold-200); }
-.sa3 { background-color: var(--gold-50);   color: var(--green-900); }
-.sa4 { background-color: var(--green-900); color: var(--gold-400); }
-.sa5 { background-color: var(--green-100); color: var(--green-900); }
-.sa6 { background-color: var(--gold-100);  color: var(--green-900); }
-
-.staff-card h4 {
-  font-size: 15px;
-  color: var(--green-900);
-  margin-bottom: 3px;
-}
-
-.st-role {
-  font-size: 11px;
-  color: var(--gold-700);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.st-dept {
-  font-size: 11px;
-  color: var(--text-muted);
-  background-color: var(--green-50);
-  padding: 3px 10px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 6px;
-}
-
-
-/* ------------------------------------------------------------
-   17. ADMISSIONS PAGE
+   22. ADMISSIONS PAGE
    ------------------------------------------------------------ */
 
 .steps-grid {
@@ -1719,8 +1743,8 @@ img {
 .step-num {
   width: 40px;
   height: 40px;
-  background-color: var(--gold-400);
-  color: var(--green-900);
+  background-color: var(--red-600);
+  color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1733,7 +1757,7 @@ img {
 
 .step-card h3 {
   font-size: 16px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 7px;
 }
 
@@ -1750,15 +1774,15 @@ img {
 }
 
 .docs-box {
-  background-color: var(--green-50);
-  border: 1px solid var(--green-100);
+  background-color: var(--blue-50);
+  border: 1px solid var(--blue-100);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
 }
 
 .docs-box h4 {
   font-size: 15px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 14px;
   display: flex;
   align-items: center;
@@ -1766,8 +1790,8 @@ img {
 }
 
 .docs-box h4 i {
-  color: var(--green-600);
   font-size: 18px;
+  color: var(--blue-600);
 }
 
 .docs-box li {
@@ -1781,16 +1805,15 @@ img {
 }
 
 .docs-box li:last-child {
-  border: none;
+  border-bottom: none;
 }
 
-/* Small tick circle before each list item */
 .docs-box li::before {
   content: '✓';
   width: 20px;
   height: 20px;
-  background-color: var(--green-100);
-  color: var(--green-700);
+  background-color: var(--blue-100);
+  color: var(--blue-700);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -1802,7 +1825,7 @@ img {
 
 
 /* ------------------------------------------------------------
-   18. CONTACT PAGE
+   23. CONTACT PAGE
    ------------------------------------------------------------ */
 
 .contact-layout {
@@ -1819,7 +1842,7 @@ img {
 }
 
 .ct-card {
-  background-color: var(--green-800);
+  background-color: var(--blue-800);
   border-radius: var(--radius-md);
   padding: 1.1rem 1.3rem;
   display: flex;
@@ -1830,7 +1853,7 @@ img {
 
 .ct-card i {
   font-size: 22px;
-  color: var(--gold-400);
+  color: var(--red-400);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -1838,7 +1861,7 @@ img {
 .ct-card strong {
   display: block;
   font-size: 11px;
-  color: var(--green-200);
+  color: var(--blue-200);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -1851,7 +1874,6 @@ img {
   line-height: 1.6;
 }
 
-/* Contact form */
 .form-box {
   background-color: var(--white);
   border: 1px solid var(--border);
@@ -1861,7 +1883,7 @@ img {
 
 .form-box h3 {
   font-size: 20px;
-  color: var(--green-900);
+  color: var(--blue-900);
   margin-bottom: 1.5rem;
 }
 
@@ -1886,7 +1908,7 @@ img {
 .fg label {
   font-size: 12px;
   font-weight: 700;
-  color: var(--green-800);
+  color: var(--blue-800);
 }
 
 .fg input,
@@ -1906,8 +1928,8 @@ img {
 .fg input:focus,
 .fg select:focus,
 .fg textarea:focus {
-  border-color: var(--green-600);
-  box-shadow: 0 0 0 3px rgba(39, 138, 60, 0.1);
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px rgba(26, 68, 168, 0.1);
 }
 
 .fg textarea {
@@ -1915,14 +1937,13 @@ img {
   min-height: 100px;
 }
 
-/* Form success message */
 .form-ok {
-  background-color: var(--green-50);
-  border: 1px solid var(--green-100);
+  background-color: var(--blue-50);
+  border: 1px solid var(--blue-100);
   border-radius: var(--radius-md);
   padding: 0.9rem 1.1rem;
   font-size: 13px;
-  color: var(--green-800);
+  color: var(--blue-800);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1931,16 +1952,16 @@ img {
 
 .form-ok i {
   font-size: 18px;
-  color: var(--green-600);
+  color: var(--blue-600);
 }
 
 
 /* ------------------------------------------------------------
-   19. FOOTER
+   24. FOOTER
    ------------------------------------------------------------ */
 
 .site-footer {
-  background-color: var(--green-900);
+  background-color: var(--blue-900);
 }
 
 .footer-top {
@@ -1959,22 +1980,22 @@ img {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: var(--gold-400);
-  border: 2px solid var(--gold-200);
+  background-color: var(--red-600);
+  border: 2px solid var(--red-300);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 700;
-  color: var(--green-900);
+  color: var(--white);
   margin-bottom: 12px;
 }
 
 .footer-school-name {
   font-family: 'Playfair Display', serif;
   font-size: 17px;
-  color: var(--gold-300);
+  color: var(--white);
   margin-bottom: 2px;
 }
 
@@ -1982,28 +2003,28 @@ img {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 13px;
-  color: var(--gold-200);
+  color: var(--red-200);
   margin-bottom: 10px;
 }
 
 .footer-about {
   font-size: 12px;
-  color: var(--green-200);
+  color: var(--blue-200);
   line-height: 1.85;
 }
 
 .footer-col h4 {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.9px;
-  color: var(--gold-300);
+  letter-spacing: 1px;
+  color: var(--red-300);
   margin-bottom: 14px;
 }
 
 .footer-col li {
   font-size: 13px;
-  color: var(--green-200);
+  color: var(--blue-200);
   padding: 5px 0;
   cursor: pointer;
   display: flex;
@@ -2013,7 +2034,7 @@ img {
 }
 
 .footer-col li:hover {
-  color: var(--gold-300);
+  color: var(--white);
 }
 
 .footer-bottom {
@@ -2027,25 +2048,19 @@ img {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: var(--green-400);
+  color: var(--blue-400);
   flex-wrap: wrap;
   gap: 6px;
 }
 
 
 /* ------------------------------------------------------------
-   20. RESPONSIVE — MOBILE & TABLET
+   25. RESPONSIVE — TABLET & MOBILE
    ------------------------------------------------------------ */
 
 @media (max-width: 900px) {
 
-  /* Hide the top info bar on small screens */
   .topbar {
-    display: none;
-  }
-
-  /* Header */
-  .logo-motto {
     display: none;
   }
 
@@ -2053,7 +2068,7 @@ img {
     padding: 0 1.25rem;
   }
 
-  /* Nav becomes a full-screen slide-in panel */
+  /* Nav becomes a full screen slide-in panel */
   .main-nav {
     display: none;
     flex-direction: column;
@@ -2062,7 +2077,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--green-900);
+    background-color: var(--blue-900);
     padding: 1.5rem 1.25rem;
     overflow-y: auto;
     gap: 4px;
@@ -2073,7 +2088,7 @@ img {
     display: flex;
   }
 
-  /* Dropdowns become static in mobile menu */
+  /* Disable hover dropdowns on mobile */
   .nav-dropdown:hover .dropdown-menu {
     display: none;
   }
@@ -2082,16 +2097,15 @@ img {
     position: static;
     background-color: rgba(255, 255, 255, 0.04);
     box-shadow: none;
+    border: none;
     margin-top: 4px;
     margin-left: 1rem;
   }
 
-  /* Show hamburger button */
   .hamburger {
     display: flex;
   }
 
-  /* Stack hero columns */
   .hero-content {
     grid-template-columns: 1fr;
     padding: 3rem 1.5rem 1.5rem;
@@ -2101,7 +2115,6 @@ img {
     display: none;
   }
 
-  /* Stats bar adjustments */
   .hero-stats-bar {
     flex-wrap: wrap;
   }
@@ -2114,7 +2127,6 @@ img {
     padding: 0.75rem 1.2rem;
   }
 
-  /* Tighter section padding */
   .section {
     padding: 3rem 1.25rem;
   }
@@ -2122,19 +2134,18 @@ img {
   /* Stack all two-column layouts */
   .two-col,
   .directors-row,
+  .branches-grid,
   .cycle-layout,
-  .contact-layout,
   .anthem-layout,
+  .contact-layout,
   .adm-two-col {
     grid-template-columns: 1fr;
   }
 
-  /* PLE band stack */
   .ple-prep-inner {
     flex-direction: column;
   }
 
-  /* Footer two-column on tablet */
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -2145,7 +2156,6 @@ img {
     text-align: center;
   }
 
-  /* Form row stack */
   .form-row2 {
     grid-template-columns: 1fr;
   }

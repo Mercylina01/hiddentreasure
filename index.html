@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hidden Treasure Primary School Maya</title>
-  <meta name="description" content="Hidden Treasure Primary School Maya — With God Everything is Possible. Directors: Eugene & Florence Nsamba." />
+  <title>Hidden Treasure Children's Foundation</title>
+  <meta name="description" content="Hidden Treasure Children's Foundation — Train up a child in the way he should go. Directors: Eugene & Florence Nsamba. Branches at Maya and Kamengo." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -13,333 +13,332 @@
 </head>
 <body>
 
+<!-- TOPBAR 
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="ti ti-map-pin"></i> Maya, Wakiso & Kamengo, Mpigi</span>
+      <span><i class="ti ti-phone"></i> +256 700 000 000</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="ti ti-mail"></i> info@hiddentreasure.ac.ug</span>
+      <span><i class="ti ti-clock"></i> Mon–Fri: 7:00 AM – 5:30 PM</span>
+    </div>
+  </div>
+</div>
+-->
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a class="header-logo" href="#" onclick="showPage('home')">
-      <div class="logo-crest">
-        <span class="crest-ht">HT</span>
-        <div class="crest-ring"></div>
-      </div>
+      <div class="logo-crest"><span class="crest-ht">HT</span></div>
       <div class="logo-text">
-        <span class="logo-name">Hidden Treasure</span>
-        <span class="logo-sub">Primary School Maya</span>
-        <span class="logo-motto">"With God everything is possible"</span>
+        <span class="logo-name">Hidden Treasure Children's Foundation</span>
       </div>
     </a>
-
     <nav class="main-nav" id="mainNav">
-      <a href="#" class="nav-item active" id="nav-home" onclick="showPage('home')">
-        <i class="ti ti-home"></i> Home
-      </a>
+      <a href="#" class="nav-item active" id="nav-home" onclick="showPage('home')"><i class="ti ti-home"></i> Home</a>
       <div class="nav-dropdown">
-        <a href="#" class="nav-item" id="nav-about" onclick="showPage('about')">
-          <i class="ti ti-info-circle"></i> About Us <i class="ti ti-chevron-down" style="font-size:11px;"></i>
-        </a>
+        <a href="#" class="nav-item" id="nav-about" onclick="showPage('about')"><i class="ti ti-info-circle"></i> About Us <i class="ti ti-chevron-down" style="font-size:11px;"></i></a>
         <div class="dropdown-menu">
-          <a href="#" onclick="showPage('about'); scrollTo('about-story')">Our Story</a>
-          <a href="#" onclick="showPage('about'); scrollTo('about-directors')">Directors</a>
-          <a href="#" onclick="showPage('about'); scrollTo('about-vision')">Vision & Mission</a>
-          <a href="#" onclick="showPage('anthem')">School Anthem</a>
+          <a href="#" onclick="showPage('about'); scrollSec('about-story')">Our Story</a>
+          <a href="#" onclick="showPage('about'); scrollSec('about-branches')">Our Branches</a>
+          <a href="#" onclick="showPage('about'); scrollSec('about-directors')">Directors</a>
+          <a href="#" onclick="showPage('about'); scrollSec('about-vision')">Vision & Mission</a>
+         <!-- <a href="#" onclick="showPage('anthem')">School Anthem</a> -->
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="#" class="nav-item" id="nav-curriculum" onclick="showPage('curriculum')">
-          <i class="ti ti-book"></i> Curriculum <i class="ti ti-chevron-down" style="font-size:11px;"></i>
-        </a>
+        <a href="#" class="nav-item" id="nav-curriculum" onclick="showPage('curriculum')"><i class="ti ti-book"></i> Curriculum <i class="ti ti-chevron-down" style="font-size:11px;"></i></a>
         <div class="dropdown-menu">
-          <a href="#" onclick="showPage('curriculum'); scrollTo('curr-nursery')">Nursery Section</a>
-          <a href="#" onclick="showPage('curriculum'); scrollTo('curr-lower')">Lower Primary (P1–P3)</a>
-          <a href="#" onclick="showPage('curriculum'); scrollTo('curr-upper')">Upper Primary (P4–P7)</a>
-          <a href="#" onclick="showPage('curriculum'); scrollTo('curr-cocurr')">Co-curricular</a>
+          <a href="#" onclick="showPage('curriculum'); scrollSec('curr-nursery')">Nursery Section</a>
+          <a href="#" onclick="showPage('curriculum'); scrollSec('curr-lower')">Lower Primary (P1–P3)</a>
+          <a href="#" onclick="showPage('curriculum'); scrollSec('curr-upper')">Upper Primary (P4–P7)</a>
+          <a href="#" onclick="showPage('curriculum'); scrollSec('curr-cocurr')">Co-curricular</a>
         </div>
       </div>
-      <a href="#" class="nav-item" id="nav-staff" onclick="showPage('staff')">
-        <i class="ti ti-users"></i> Our Staff
-      </a>
-      <a href="#" class="nav-item" id="nav-anthem" onclick="showPage('anthem')">
-        <i class="ti ti-music"></i> Anthem
-      </a>
-      <a href="#" class="nav-item" id="nav-admissions" onclick="showPage('admissions')">
-        <i class="ti ti-pencil-plus"></i> Admissions
-      </a>
-      <a href="#" class="nav-item" id="nav-contact" onclick="showPage('contact')">
-        <i class="ti ti-phone"></i> Contact
-      </a>
+     <!-- <a href="#" class="nav-item" id="nav-anthem" onclick="showPage('anthem')"><i class="ti ti-music"></i> Anthem</a> -->
+      <a href="#" class="nav-item" id="nav-admissions" onclick="showPage('admissions')"><i class="ti ti-pencil-plus"></i> Admissions</a>
+      <a href="#" class="nav-item" id="nav-contact" onclick="showPage('contact')"><i class="ti ti-phone"></i> Contact</a>
       <button class="apply-btn" onclick="showPage('admissions')">Apply Now</button>
     </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ===== HOME PAGE ===== -->
+<!-- ═══════════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════════ -->
 <div id="page-home" class="page active">
 
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-    <div class="hero-bg-overlay"></div>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-glow"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge">
-          <i class="ti ti-star-filled"></i> 
-        </div>
+        <div class="hero-badge"><i class="ti ti-star-filled"></i> Faith · Excellence · Character</div>
         <h1 class="hero-title">
           Welcome to<br>
           <span class="hero-title-accent">Hidden Treasure</span><br>
-          Primary School Maya
+          Children's Foundation
         </h1>
-        <p class="hero-motto-text">
-          <i class="ti ti-bible" style="font-size:18px; vertical-align:-3px; margin-right:8px;"></i>
-          "With God everything is possible" — Matthew 19:26
+        <p class="hero-scripture">
+          "Train up a child in the way he should go, and when he is old he will not depart from it."<br>
+          — Proverbs 22:6
         </p>
-        <p class="hero-desc">A faith-based primary school nurturing every child's God-given potential through academic excellence, strong values, and holistic education.</p>
+        <p class="hero-desc">A faith-based foundation nurturing every child's God-given potential through academic excellence, strong Christian values, and holistic education — across two branches in Wakiso and Mpigi.</p>
         <div class="hero-btns">
-          <button class="btn-gold" onclick="showPage('admissions')">
-            <i class="ti ti-pencil-plus"></i> Apply for Admission
-          </button>
-          <button class="btn-outline-white" onclick="showPage('about')">
-            Discover Our School
-          </button>
+          <button class="btn-red" onclick="showPage('admissions')"><i class="ti ti-pencil-plus"></i> Apply for Admission</button>
+          <button class="btn-outline-white" onclick="showPage('about')">Discover Our Foundation</button>
         </div>
       </div>
       <div class="hero-crest-visual">
         <div class="hero-crest-outer">
           <div class="hero-crest-inner">
-            <div class="hero-crest-letters">HT</div>
-            <div class="hero-crest-name">Hidden Treasure</div>
+            <div class="hero-crest-letters"></div>
+            <div class="hero-crest-name">Hidden Treasure<br>Children's Foundation</div>
             <div class="hero-crest-divider"></div>
-            <div class="hero-crest-motto">With God Everything<br>is Possible</div>
+            <div class="hero-crest-motto">"With God Everything<br>is Possible"</div>
           </div>
         </div>
-        <div class="hero-crest-leaves hero-crest-leaf-l">🌿</div>
-        <div class="hero-crest-leaves hero-crest-leaf-r">🌿</div>
       </div>
     </div>
     <div class="hero-stats-bar">
-      <div class="hero-stat"><span class="hs-num">500+</span><span class="hs-lbl">Pupils Enrolled</span></div>
+      <div class="hero-stat"><span class="hs-num">2</span><span class="hs-lbl">Branches</span></div>
       <div class="hero-stat-div"></div>
-      <div class="hero-stat"><span class="hs-num">40+</span><span class="hs-lbl">Qualified Staff</span></div>
+      <div class="hero-stat"><span class="hs-num">800+</span><span class="hs-lbl">Pupils Enrolled</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="hs-num">60+</span><span class="hs-lbl">Qualified Staff</span></div>
       <div class="hero-stat-div"></div>
       <div class="hero-stat"><span class="hs-num">Nursery–P7</span><span class="hs-lbl">All Levels</span></div>
       <div class="hero-stat-div"></div>
       <div class="hero-stat"><span class="hs-num">98%</span><span class="hs-lbl">PLE Pass Rate</span></div>
-      <div class="hero-stat-div"></div>
-      <div class="hero-stat"><span class="hs-num">1986</span><span class="hs-lbl">Founded</span></div>
     </div>
   </section>
 
-  <!-- Welcome strip -->
+  <!-- Scripture Band -->
+  <div class="scripture-band">
+    <p><strong>Proverbs 22:6</strong> — "Train up a child in the way he should go, and when he is old he will not depart from it."</p>
+  </div>
+
+  <!-- Welcome -->
   <div class="welcome-strip">
     <div class="welcome-strip-inner">
       <div class="ws-icon"><i class="ti ti-heart"></i></div>
-      <p>We believe <strong>every child is a hidden treasure</strong> — our purpose is to uncover and nurture their God-given potential through excellent education, Christian values, and a warm, caring community.</p>
-      <button class="btn-green-sm" onclick="showPage('about')">Learn More →</button>
+      <p>We believe <strong>every child is a hidden treasure</strong> — our purpose is to uncover and nurture their God-given potential through excellent education, Christian values, and a warm, caring community across both our branches.</p>
+      <button class="btn-sm-red" onclick="showPage('about')">Learn More →</button>
     </div>
   </div>
 
-  <!-- Why choose us -->
+  <!-- Our Branches -->
   <section class="section">
     <div class="sec-head center">
-      <div class="sec-label">Excellence in Education</div>
-      <h2 class="sec-title">Why Choose Hidden Treasure?</h2>
-      <div class="gold-bar center-bar"></div>
+      <div class="sec-label">Our Family of Schools</div>
+      <h2 class="sec-title">Two Branches, One Foundation</h2>
+      <div class="red-bar center-bar"></div>
+      <p class="sec-desc" style="margin:0 auto 2rem;">The Hidden Treasure Children's Foundation operates two schools bringing quality, faith-based education to communities in Wakiso and Mpigi districts.</p>
     </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-school"></i></div>
-        <h3>Academic Excellence</h3>
-        <p>Qualified teachers, structured UNEB curriculum, and consistent top PLE results that open doors for every graduate.</p>
+    <div class="branches-grid">
+      <div class="branch-card">
+        <div class="branch-card-header">
+          <h3>Hidden Treasure Primary School</h3>
+          <p><i class="ti ti-map-pin"></i> Maya, Wakiso District</p>
+        </div>
+        <div class="branch-card-body">
+          <span class="branch-badge">Flagship School</span>
+          <p>Our founding school in Maya, Wakiso — a mixed day and boarding nursery and primary school licensed by the Ministry of Education and an approved UNEB examination centre. Known for discipline, academic excellence, and consistent top PLE results.</p>
+          <ul class="branch-meta">
+            <li><i class="ti ti-users"></i> 500+ pupils enrolled</li>
+            <li><i class="ti ti-certificate"></i> UNEB approved exam centre</li>
+            <li><i class="ti ti-home"></i> Day & boarding facilities</li>
+            <li><i class="ti ti-book"></i> Nursery through Primary Seven</li>
+          </ul>
+        </div>
       </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-heart"></i></div>
-        <h3>Christian Foundation</h3>
-        <p>Faith, integrity, and character are woven into every subject, activity, and interaction at our school.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-users"></i></div>
-        <h3>Child-Centred Care</h3>
-        <p>Every pupil is known by name. We diagnose learning difficulties early and provide targeted support for every child to thrive.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-trophy"></i></div>
-        <h3>Holistic Development</h3>
-        <p>Sports, music, drama, debates, ICT, and clubs that build confidence, teamwork, and well-rounded character.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-building"></i></div>
-        <h3>Modern Facilities</h3>
-        <p>A well-resourced library, computer lab, sports grounds, and safe boarding facilities for our residential pupils.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="ti ti-certificate"></i></div>
-        <h3>UNEB Registered</h3>
-        <p>Licensed by the Ministry of Education and an approved UNEB examination centre with a strong track record.</p>
+      <div class="branch-card">
+        <div class="branch-card-header">
+          <h3>Treasured Generation School</h3>
+          <p><i class="ti ti-map-pin"></i> Kamengo, Mpigi District</p>
+        </div>
+        <div class="branch-card-body">
+          <span class="branch-badge" style="background:var(--blue-50);color:var(--blue-700);">Kamengo Branch</span>
+          <p>Our growing branch at Kamengo, Mpigi — extending the Foundation's mission of holistic, Christ-centred education to the Kamengo community. The same high standards, values, and curriculum as our Maya school.</p>
+          <ul class="branch-meta">
+            <li><i class="ti ti-users"></i> 300+ pupils enrolled</li>
+            <li><i class="ti ti-heart"></i> Faith-based, child-centred</li>
+            <li><i class="ti ti-school"></i> Day school</li>
+            <li><i class="ti ti-book"></i> Nursery through Primary Seven</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Motto Banner -->
+  <!-- Why Choose Us -->
+  <div class="bg-off" style="padding: 1px 0;">
+    <section class="section">
+      <div class="sec-head center">
+        <div class="sec-label">Excellence in Education</div>
+        <h2 class="sec-title">Why Choose Hidden Treasure?</h2>
+        <div class="red-bar center-bar"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-school"></i></div><h3>Academic Excellence</h3><p>Qualified teachers, structured UNEB curriculum, and consistent top PLE results that open doors for every graduate.</p></div>
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-heart"></i></div><h3>Christian Foundation</h3><p>Faith, integrity, and character are woven into every subject, activity, and interaction at our schools.</p></div>
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-users"></i></div><h3>Child-Centred Care</h3><p>Every pupil is known by name. We identify learning difficulties early and provide targeted support for every child.</p></div>
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-trophy"></i></div><h3>Holistic Development</h3><p>Sports, music, drama, debates, ICT, and clubs that build confidence, teamwork, and well-rounded character.</p></div>
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-building"></i></div><h3>Modern Facilities</h3><p>Well-resourced libraries, computer labs, sports grounds, and safe boarding facilities at our Maya campus.</p></div>
+        <div class="feat-card"><div class="feat-icon"><i class="ti ti-certificate"></i></div><h3>UNEB Registered</h3><p>Licensed by the Ministry of Education and an approved UNEB examination centre with a strong track record.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Motto Band -->
   <div class="motto-band">
     <div class="motto-band-inner">
-      <i class="ti ti-quote" style="font-size:3rem; opacity:0.3; position:absolute; left:2rem; top:50%; transform:translateY(-50%);"></i>
-      <blockquote>
-        "With God everything is possible"
-        <cite>— Matthew 19:26 · Motto of Hidden Treasure Primary School Maya</cite>
-      </blockquote>
+      <blockquote>"With God everything is possible"<cite>— Matthew 19:26 · Motto of Hidden Treasure Children's Foundation</cite></blockquote>
     </div>
   </div>
 
-  <!-- Quick Links Grid -->
-  <section class="section bg-off">
+  <!-- Quick Links -->
+  <section class="section">
     <div class="sec-head center">
-      <div class="sec-label">Explore Our School</div>
+      <div class="sec-label">Explore Our Foundation</div>
       <h2 class="sec-title">What Would You Like to Know?</h2>
-      <div class="gold-bar center-bar"></div>
+      <div class="red-bar center-bar"></div>
     </div>
     <div class="quicklinks-grid">
-      <div class="ql-card" onclick="showPage('about')">
-        <i class="ti ti-info-circle ql-ico"></i>
-        <h3>About Us</h3>
-        <p>Our story, founders, vision, and mission</p>
-        <span class="ql-arrow">→</span>
-      </div>
-      <div class="ql-card" onclick="showPage('anthem')">
-        <i class="ti ti-music ql-ico"></i>
-        <h3>School Anthem</h3>
-        <p>Our school song and values in verse</p>
-        <span class="ql-arrow">→</span>
-      </div>
-      <div class="ql-card" onclick="showPage('curriculum')">
-        <i class="ti ti-book ql-ico"></i>
-        <h3>Curriculum</h3>
-        <p>Nursery through P7, co-curricular activities</p>
-        <span class="ql-arrow">→</span>
-      </div>
-      <div class="ql-card" onclick="showPage('staff')">
-        <i class="ti ti-users ql-ico"></i>
-        <h3>Our Staff</h3>
-        <p>Meet our dedicated teachers and support team</p>
-        <span class="ql-arrow">→</span>
-      </div>
-      <div class="ql-card" onclick="showPage('admissions')">
-        <i class="ti ti-pencil-plus ql-ico"></i>
-        <h3>Admissions</h3>
-        <p>How to apply and what to bring</p>
-        <span class="ql-arrow">→</span>
-      </div>
-      <div class="ql-card" onclick="showPage('contact')">
-        <i class="ti ti-phone ql-ico"></i>
-        <h3>Contact Us</h3>
-        <p>Get in touch or visit us at Maya</p>
-        <span class="ql-arrow">→</span>
-      </div>
+      <div class="ql-card" onclick="showPage('about')"><i class="ti ti-info-circle ql-ico"></i><h3>About Us</h3><p>Our story, founders, vision, and mission</p><span class="ql-arrow">→</span></div>
+      <div class="ql-card" onclick="showPage('anthem')"><i class="ti ti-music ql-ico"></i><h3>School Anthem</h3><p>Our school song and values in verse</p><span class="ql-arrow">→</span></div>
+      <div class="ql-card" onclick="showPage('curriculum')"><i class="ti ti-book ql-ico"></i><h3>Curriculum</h3><p>Nursery through P7, co-curricular activities</p><span class="ql-arrow">→</span></div>
+      <div class="ql-card" onclick="showPage('admissions')"><i class="ti ti-pencil-plus ql-ico"></i><h3>Admissions</h3><p>How to apply and what to bring</p><span class="ql-arrow">→</span></div>
+      <div class="ql-card" onclick="showPage('contact')"><i class="ti ti-phone ql-ico"></i><h3>Contact Us</h3><p>Get in touch or visit us at Maya or Kamengo</p><span class="ql-arrow">→</span></div>
     </div>
   </section>
+</div>
 
-</div><!-- /home -->
-
-
-<!-- ===== ABOUT PAGE ===== -->
+<!-- ═══════════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════════ -->
 <div id="page-about" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#0d3b1e,#1a5c28);">
-    <h1>About Hidden Treasure</h1>
-    <p>Our story, our leaders, our values</p>
+  <div class="page-hero">
+    <h1>About Our Foundation</h1>
+    <p>Our story, our branches, our leaders, and our values</p>
+  </div>
+
+  <div class="scripture-band">
+    <p><strong>Proverbs 22:6</strong> — "Train up a child in the way he should go, and when he is old he will not depart from it."</p>
   </div>
 
   <section class="section" id="about-story">
-    <div class="sec-head">
-      <div class="sec-label">Our Story</div>
-      <h2 class="sec-title">Who We Are</h2>
-      <div class="gold-bar"></div>
-    </div>
+    <div class="sec-head"><div class="sec-label">Our Story</div><h2 class="sec-title">Who We Are</h2><div class="red-bar"></div></div>
     <div class="two-col">
       <div>
-        <p>Hidden Treasure Primary School Maya was founded on a deeply held belief — that every child carries a unique, God-given treasure waiting to be discovered and developed. Nestled in the Maya community of Wakiso District, our school has grown into a trusted institution known for discipline, academic excellence, and a sincere love for every pupil in our care.</p>
+        <p>Hidden Treasure Children's Foundation was born from a deeply held belief — that every child carries a unique, God-given treasure waiting to be discovered and developed. What began as a single school in Maya, Wakiso District has grown into a Foundation with two branches, serving hundreds of children across Wakiso and Mpigi districts.</p>
         <br>
-        <p>We are a mixed day and boarding nursery and primary school, licensed and registered by the Ministry of Education and Sports of Uganda, and an approved examination centre under the Uganda National Examinations Board (UNEB).</p>
+        <p>We are a mixed day and boarding nursery and primary school group, licensed and registered by the Ministry of Education and Sports of Uganda, and an approved examination centre under the Uganda National Examinations Board (UNEB).</p>
         <br>
-        <p>Our school embraces a child-centred philosophy that promotes creative thinking, lifelong learning, and strong Christian values. Through partnerships with parents and the community, we strive to make every academic dream a reality.</p>
+        <p>Our schools embrace a child-centred philosophy that promotes creative thinking, lifelong learning, and strong Christian values. Through partnerships with parents and the community, we strive to make every academic dream a reality.</p>
       </div>
       <div class="about-highlights">
         <div class="ah-item"><i class="ti ti-calendar-check"></i><div><strong>Licensed</strong><span>Ministry of Education & Sports, Uganda</span></div></div>
         <div class="ah-item"><i class="ti ti-certificate"></i><div><strong>UNEB Exam Centre</strong><span>Approved examination registration centre</span></div></div>
+        <div class="ah-item"><i class="ti ti-school"></i><div><strong>Two Branches</strong><span>Maya (Wakiso) & Kamengo (Mpigi)</span></div></div>
         <div class="ah-item"><i class="ti ti-home"></i><div><strong>Day & Boarding</strong><span>Mixed nursery and primary school</span></div></div>
-        <div class="ah-item"><i class="ti ti-map-pin"></i><div><strong>Maya, Wakiso</strong><span>Serving the local community since founding</span></div></div>
+        <div class="ah-item"><i class="ti ti-bible"></i><div><strong>Faith-Based</strong><span>Christ-centred education since founding</span></div></div>
       </div>
     </div>
   </section>
 
-  <div class="divider-section bg-off" id="about-directors">
-    <div class="section">
-      <div class="sec-head">
-        <div class="sec-label">School Leadership</div>
-        <h2 class="sec-title">Our Founding Directors</h2>
-        <div class="gold-bar"></div>
-      </div>
-      <div class="directors-row">
-        <div class="director-card">
-          <div class="dir-avatar green-av">EN</div>
-          <div class="dir-body">
-            <h3>Eugene Nsamba</h3>
-            <div class="dir-role">Co-Founder & Director</div>
-            <p>A visionary leader with a passion for transforming communities through quality education. Mr Nsamba founded Hidden Treasure Primary School to create a space where every child — regardless of background — could access excellent, faith-based learning and reach their God-given potential. He oversees school governance, strategic growth, and community partnerships.</p>
+  <!-- Branches Detail -->
+  <div class="bg-off" style="padding: 1px 0;" id="about-branches">
+    <section class="section">
+      <div class="sec-head"><div class="sec-label">Our Schools</div><h2 class="sec-title">Our Two Branches</h2><div class="red-bar"></div></div>
+      <div class="branches-grid">
+        <div class="branch-card">
+          <div class="branch-card-header"><h3>Hidden Treasure Primary School</h3><p><i class="ti ti-map-pin"></i> Maya, Wakiso District</p></div>
+          <div class="branch-card-body">
+            <span class="branch-badge">Flagship School · Est. 1986</span>
+            <p>Our founding campus — a thriving day and boarding school known across Wakiso for its academic discipline, Christian ethos, and strong PLE performance. Home to 500+ pupils from Nursery through Primary Seven.</p>
+            <ul class="branch-meta">
+              <li><i class="ti ti-users"></i> 500+ pupils · 40+ staff</li>
+              <li><i class="ti ti-certificate"></i> UNEB approved exam centre</li>
+              <li><i class="ti ti-home"></i> Day & boarding</li>
+              <li><i class="ti ti-device-laptop"></i> Library, computer lab, sports grounds</li>
+            </ul>
           </div>
         </div>
-        <div class="director-card">
-          <div class="dir-avatar gold-av">FN</div>
-          <div class="dir-body">
-            <h3>Florence Nsamba</h3>
-            <div class="dir-role">Co-Founder & Director</div>
-            <p>A dedicated educator with a heart for children, Mrs Nsamba brings warmth, wisdom, and unwavering commitment to every aspect of school life. She leads pastoral care and pupil welfare, ensuring that Hidden Treasure remains a place where every child feels loved, safe, and motivated to excel. Her nurturing leadership is the soul of our school community.</p>
+        <div class="branch-card">
+          <div class="branch-card-header"><h3>Treasured Generation School</h3><p><i class="ti ti-map-pin"></i> Kamengo, Mpigi District</p></div>
+          <div class="branch-card-body">
+            <span class="branch-badge" style="background:var(--blue-50);color:var(--blue-700);">Kamengo Branch</span>
+            <p>Our Kamengo branch extends the Foundation's mission to Mpigi District — the same values, curriculum, and quality of care that defines Hidden Treasure, brought to a new community.</p>
+            <ul class="branch-meta">
+              <li><i class="ti ti-users"></i> 300+ pupils · 20+ staff</li>
+              <li><i class="ti ti-heart"></i> Faith-based day school</li>
+              <li><i class="ti ti-book"></i> Nursery through P7</li>
+              <li><i class="ti ti-map-pin"></i> Kamengo, Mpigi District</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 
-  <section class="section" id="about-vision">
-    <div class="sec-head">
-      <div class="sec-label">What Drives Us</div>
-      <h2 class="sec-title">Vision, Mission & Values</h2>
-      <div class="gold-bar"></div>
-    </div>
-    <div class="vmv-grid">
-      <div class="vmv-card">
-        <div class="vmv-icon"><i class="ti ti-eye"></i></div>
-        <h3>Vision</h3>
-        <p>To be a centre of academic and spiritual excellence, producing confident, Godly, and compassionate leaders for Uganda and beyond.</p>
+  <!-- Directors -->
+  <section class="section" id="about-directors">
+    <div class="sec-head"><div class="sec-label">Foundation Leadership</div><h2 class="sec-title">Our Founding Directors</h2><div class="red-bar"></div></div>
+    <div class="directors-row">
+      <div class="director-card">
+        <div class="dir-avatar av-blue">EN</div>
+        <div class="dir-body">
+          <h3>Eugene Nsamba</h3>
+          <div class="dir-role">Co-Founder & Director</div>
+          <p>A visionary leader with a passion for transforming communities through quality education. Mr Nsamba founded Hidden Treasure to create a space where every child — regardless of background — could access excellent, faith-based learning and reach their God-given potential. He oversees school governance, strategic growth, and community partnerships across both branches.</p>
+        </div>
       </div>
-      <div class="vmv-card">
-        <div class="vmv-icon"><i class="ti ti-target"></i></div>
-        <h3>Mission</h3>
-        <p>To provide holistic, Christ-centred education that develops the mind, builds the character, and nurtures the spirit of every child in our care.</p>
-      </div>
-      <div class="vmv-card">
-        <div class="vmv-icon"><i class="ti ti-star"></i></div>
-        <h3>Core Values</h3>
-        <ul class="values-list">
-          <li><i class="ti ti-check"></i> Faith in God</li>
-          <li><i class="ti ti-check"></i> Academic Excellence</li>
-          <li><i class="ti ti-check"></i> Integrity</li>
-          <li><i class="ti ti-check"></i> Respect for All</li>
-          <li><i class="ti ti-check"></i> Discipline</li>
-          <li><i class="ti ti-check"></i> Love & Compassion</li>
-        </ul>
+      <div class="director-card">
+        <div class="dir-avatar av-red">FN</div>
+        <div class="dir-body">
+          <h3>Florence Nsamba</h3>
+          <div class="dir-role">Co-Founder & Director</div>
+          <p>A dedicated educator with a heart for children, Mrs Nsamba brings warmth, wisdom, and unwavering commitment to every aspect of school life. She leads pastoral care and pupil welfare, ensuring that every branch of Hidden Treasure remains a place where every child feels loved, safe, and motivated to excel.</p>
+        </div>
       </div>
     </div>
   </section>
-</div><!-- /about -->
 
+  <!-- VMV -->
+  <div class="bg-off" style="padding:1px 0;" id="about-vision">
+    <section class="section">
+      <div class="sec-head"><div class="sec-label">What Drives Us</div><h2 class="sec-title">Vision, Mission & Values</h2><div class="red-bar"></div></div>
+      <div class="vmv-grid">
+        <div class="vmv-card"><div class="vmv-icon"><i class="ti ti-eye"></i></div><h3>Vision</h3><p>To be a centre of academic and spiritual excellence, producing confident, Godly, and compassionate leaders for Uganda and beyond.</p></div>
+        <div class="vmv-card"><div class="vmv-icon"><i class="ti ti-target"></i></div><h3>Mission</h3><p>To provide holistic, Christ-centred education that develops the mind, builds the character, and nurtures the spirit of every child in our care.</p></div>
+        <div class="vmv-card"><div class="vmv-icon"><i class="ti ti-star"></i></div><h3>Core Values</h3>
+          <ul class="values-list">
+            <li><i class="ti ti-check"></i> Faith in God</li>
+            <li><i class="ti ti-check"></i> Academic Excellence</li>
+            <li><i class="ti ti-check"></i> Integrity</li>
+            <li><i class="ti ti-check"></i> Respect for All</li>
+            <li><i class="ti ti-check"></i> Discipline</li>
+            <li><i class="ti ti-check"></i> Love & Compassion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
-<!-- ===== SCHOOL ANTHEM PAGE ===== -->
+<!-- ═══════════════════════════════════════════
+     ANTHEM PAGE
+═══════════════════════════════════════════ 
 <div id="page-anthem" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#3a2200,#7a4d00);">
+  <div class="page-hero page-hero-red">
     <h1>School Anthem</h1>
     <p>The song that unites our Hidden Treasure family</p>
   </div>
@@ -350,13 +349,12 @@
         <div class="sec-head">
           <div class="sec-label">Our School Song</div>
           <h2 class="sec-title">Hidden Treasure School Anthem</h2>
-          <div class="gold-bar"></div>
-          <p style="color:var(--text-muted); font-size:14px; margin-top:0.5rem;">Sung at assemblies, events, and graduations — our anthem is a declaration of faith, purpose, and pride.</p>
+          <div class="red-bar"></div>
+          <p style="color:var(--text-muted);font-size:14px;margin-top:0.5rem;">Sung at assemblies, events, and graduations — our anthem is a declaration of faith, purpose, and pride.</p>
         </div>
-
         <div class="anthem-card">
           <div class="anthem-music-icon"><i class="ti ti-music"></i></div>
-<!--
+
           <div class="verse-block">
             <div class="verse-label">Verse 1</div>
             <p>Hidden Treasure, our dear school,<br>
@@ -367,10 +365,10 @@
 
           <div class="chorus-block">
             <div class="verse-label chorus-lbl">Chorus</div>
-            <p><em>With God, with God, everything is possible,<br>
+            <p>With God, with God, everything is possible,<br>
             We rise, we shine, we soar above,<br>
             Hidden Treasure, our great school,<br>
-            Built on faith and built on love.</em></p>
+            Built on faith and built on love.</p>
           </div>
 
           <div class="verse-block">
@@ -383,10 +381,10 @@
 
           <div class="chorus-block">
             <div class="verse-label chorus-lbl">Chorus</div>
-            <p><em>With God, with God, everything is possible,<br>
+            <p>With God, with God, everything is possible,<br>
             We rise, we shine, we soar above,<br>
             Hidden Treasure, our great school,<br>
-            Built on faith and built on love.</em></p>
+            Built on faith and built on love.</p>
           </div>
 
           <div class="verse-block">
@@ -399,33 +397,41 @@
 
           <div class="chorus-block">
             <div class="verse-label chorus-lbl">Final Chorus</div>
-            <p><em>With God, with God, everything is possible,<br>
+            <p>With God, with God, everything is possible,<br>
             We rise, we shine, we soar above,<br>
             Hidden Treasure, our great school,<br>
             Built on faith and built on love.<br>
-            <strong>Hidden Treasure — forever!</strong></em></p>
+            <strong>Hidden Treasure — forever!</strong></p>
           </div>
-        -->
+-->
           <div class="anthem-note">
             <i class="ti ti-info-circle"></i>
-            This is the official school anthem, to be sung at assemblies, prize-giving days, and school celebrations.
+            This is the official school anthem, sung at assemblies, prize-giving days, and school celebrations across both branches.
           </div>
         </div>
       </div>
-
+<!--
       <div class="anthem-sidebar">
+        <div class="anthem-info-card">
+          <h4><i class="ti ti-bible"></i> Foundation Scripture</h4>
+          <p class="motto-display">"Train up a child in the way he should go, and when he is old he will not depart from it."</p>
+          <span>— Proverbs 22:6</span>
+        </div>
         <div class="anthem-info-card">
           <h4><i class="ti ti-star"></i> School Motto</h4>
           <p class="motto-display">"With God everything is possible"</p>
           <span>— Matthew 19:26</span>
         </div>
+      </div>
+      
         <div class="anthem-info-card">
-          <h4><i class="ti ti-palette"></i> School Colours</h4>
+          <h4><i class="ti ti-palette"></i> Foundation Colours</h4>
           <div class="colours-row">
-            <div class="colour-chip green-chip">Green<br><small>Growth & Life</small></div>
-            <div class="colour-chip gold-chip">Gold<br><small>Excellence</small></div>
-            <div class="colour-chip white-chip">White<br><small>Purity</small></div>
+            <div class="colour-chip chip-blue">Blue<br><small>Loyalty</small></div>
+            <div class="colour-chip chip-red">Red<br><small>Excellence</small></div>
+            <div class="colour-chip chip-white">White<br><small>Purity</small></div>
           </div>
+        
         </div>
         <div class="anthem-info-card">
           <h4><i class="ti ti-calendar"></i> When We Sing</h4>
@@ -440,101 +446,58 @@
       </div>
     </div>
   </section>
-</div><!-- /anthem -->
-
-
-<!-- ===== CURRICULUM PAGE ===== -->
+</div>
+-->
+<!-- ═══════════════════════════════════════════
+     CURRICULUM PAGE
+═══════════════════════════════════════════ -->
 <div id="page-curriculum" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#0d3b1e,#217332);">
+  <div class="page-hero">
     <h1>Our Curriculum</h1>
-    <p>Nursery through Primary Seven — a UNEB-aligned education enriched with faith and co-curricular excellence</p>
+    <p>Nursery through Primary Seven — UNEB-aligned, enriched with faith and co-curricular excellence</p>
   </div>
 
   <div class="curr-intro-band">
     <div class="curr-intro-inner">
-      <i class="ti ti-book-2" style="font-size:2.5rem; color:var(--gold-400);"></i>
-      <p>Hidden Treasure Primary School follows the <strong>Uganda National Curriculum</strong> as presented by UNEB, structured across three cycles: Early Childhood, Lower Primary, and Upper Primary — enriched with Christian values, junior literature, etiquette lessons, and a wide co-curricular programme.</p>
+      <i class="ti ti-book-2" style="font-size:2.5rem;color:var(--red-300);flex-shrink:0;"></i>
+      <p>Hidden Treasure follows the <strong>Uganda National Curriculum</strong> as set by UNEB, structured across three cycles: Early Childhood, Lower Primary, and Upper Primary — enriched with Christian values, junior literature, etiquette lessons, and a wide co-curricular programme at both branches.</p>
     </div>
   </div>
 
-  <!-- Nursery -->
   <section class="section" id="curr-nursery">
-    <div class="sec-head">
-      <div class="sec-label">Foundation Stage</div>
-      <h2 class="sec-title">Nursery Section</h2>
-      <div class="gold-bar"></div>
-      <p class="sec-desc">Our nursery section lays the critical foundation for every child's learning journey in a warm, play-based, faith-filled environment.</p>
-    </div>
+    <div class="sec-head"><div class="sec-label">Foundation Stage</div><h2 class="sec-title">Nursery Section</h2><div class="red-bar"></div><p class="sec-desc">Our nursery lays the critical foundation for every child's learning journey in a warm, play-based, faith-filled environment.</p></div>
     <div class="curr-grid">
-      <div class="curr-subject-card">
-        <i class="ti ti-number-123"></i>
-        <h4>Math Concepts</h4>
-        <p>Counting, shapes, patterns, and early number recognition</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-world"></i>
-        <h4>General Knowledge</h4>
-        <p>Environment, community, and the world around us</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-pencil"></i>
-        <h4>Handwriting</h4>
-        <p>Letter formation, pencil grip, and early writing skills</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-palette"></i>
-        <h4>Drawing & Art</h4>
-        <p>Creativity, fine motor skills, and self-expression</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-music"></i>
-        <h4>Singing & Drama</h4>
-        <p>Confidence, language development, and performance</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-abc"></i>
-        <h4>English Reading & Writing</h4>
-        <p>Phonics, early reading, and simple sentence construction</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-run"></i>
-        <h4>Motor Control</h4>
-        <p>Physical coordination, play, and movement activities</p>
-      </div>
-      <div class="curr-subject-card">
-        <i class="ti ti-heart"></i>
-        <h4>CRE & Values</h4>
-        <p>Christian Religious Education, prayer, and moral grounding</p>
-      </div>
+      <div class="curr-subject-card"><i class="ti ti-number-123"></i><h4>Math Concepts</h4><p>Counting, shapes, patterns, and early number recognition</p></div>
+      <div class="curr-subject-card"><i class="ti ti-world"></i><h4>General Knowledge</h4><p>Environment, community, and the world around us</p></div>
+      <div class="curr-subject-card"><i class="ti ti-pencil"></i><h4>Handwriting</h4><p>Letter formation, pencil grip, and early writing skills</p></div>
+      <div class="curr-subject-card"><i class="ti ti-palette"></i><h4>Drawing & Art</h4><p>Creativity, fine motor skills, and self-expression</p></div>
+      <div class="curr-subject-card"><i class="ti ti-music"></i><h4>Singing & Drama</h4><p>Confidence, language development, and performance</p></div>
+      <div class="curr-subject-card"><i class="ti ti-abc"></i><h4>English Reading & Writing</h4><p>Phonics, early reading, and simple sentence construction</p></div>
+      <div class="curr-subject-card"><i class="ti ti-run"></i><h4>Motor Control</h4><p>Physical coordination, play, and movement activities</p></div>
+      <div class="curr-subject-card"><i class="ti ti-heart"></i><h4>CRE & Values</h4><p>Christian Religious Education, prayer, and moral grounding</p></div>
     </div>
   </section>
 
-  <!-- Lower Primary -->
-  <div class="bg-off">
+  <div class="bg-off" style="padding:1px 0;">
     <section class="section" id="curr-lower">
-      <div class="sec-head">
-        <div class="sec-label">Primary 1 – 3</div>
-        <h2 class="sec-title">Lower Primary Curriculum</h2>
-        <div class="gold-bar"></div>
-        <p class="sec-desc">Building core literacy, numeracy, and knowledge foundations with close individual attention and diagnosis of any learning needs.</p>
-      </div>
+      <div class="sec-head"><div class="sec-label">Primary 1 – 3</div><h2 class="sec-title">Lower Primary Curriculum</h2><div class="red-bar"></div><p class="sec-desc">Building core literacy, numeracy, and knowledge foundations with close individual attention.</p></div>
       <div class="cycle-layout">
         <div class="cycle-subjects">
-          <div class="subj-row"><span class="subj-badge core">Core</span><strong>English Language</strong> — reading, writing, grammar, comprehension, oral skills</div>
-          <div class="subj-row"><span class="subj-badge core">Core</span><strong>Mathematics</strong> — number work, basic operations, mental maths, problem-solving</div>
-          <div class="subj-row"><span class="subj-badge core">Core</span><strong>Science</strong> — nature, living things, simple experiments and observations</div>
-          <div class="subj-row"><span class="subj-badge core">Core</span><strong>Social Studies</strong> — family, community, Uganda, and our environment</div>
-          <div class="subj-row"><span class="subj-badge faith">Faith</span><strong>Christian Religious Education</strong> — Bible stories, prayer, values, and worship</div>
-          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><strong>Junior Literature</strong> — story books, poems, and love of reading</div>
-          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><strong>Etiquette & Moral Education</strong> — manners, character, and citizenship</div>
-          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><strong>Physical Education</strong> — sports, games, and healthy living</div>
+          <div class="subj-row"><span class="subj-badge core">Core</span><div><strong>English Language</strong> — reading, writing, grammar, comprehension, oral skills</div></div>
+          <div class="subj-row"><span class="subj-badge core">Core</span><div><strong>Mathematics</strong> — number work, basic operations, mental maths, problem-solving</div></div>
+          <div class="subj-row"><span class="subj-badge core">Core</span><div><strong>Science</strong> — nature, living things, simple experiments and observations</div></div>
+          <div class="subj-row"><span class="subj-badge core">Core</span><div><strong>Social Studies</strong> — family, community, Uganda, and our environment</div></div>
+          <div class="subj-row"><span class="subj-badge faith">Faith</span><div><strong>Christian Religious Education</strong> — Bible stories, prayer, values, and worship</div></div>
+          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><div><strong>Junior Literature</strong> — story books, poems, and love of reading</div></div>
+          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><div><strong>Etiquette & Moral Education</strong> — manners, character, and citizenship</div></div>
+          <div class="subj-row"><span class="subj-badge enrich">Enrichment</span><div><strong>Physical Education</strong> — sports, games, and healthy living</div></div>
         </div>
         <div class="cycle-note-card">
-          <i class="ti ti-bulb" style="font-size:2rem; color:var(--gold-400);"></i>
+          <i class="ti ti-bulb" style="font-size:2rem;color:var(--red-400);"></i>
           <h4>Our Lower Primary Approach</h4>
           <p>We diagnose each child's learning needs early. Our teachers provide targeted support and regular individual feedback, ensuring no child is left behind at this critical stage.</p>
           <ul>
-            <li><i class="ti ti-check"></i> Small class sizes for close attention</li>
+            <li><i class="ti ti-check"></i> Small class sizes</li>
             <li><i class="ti ti-check"></i> Regular reading assessments</li>
             <li><i class="ti ti-check"></i> Learning difficulty identification</li>
             <li><i class="ti ti-check"></i> Parental progress updates</li>
@@ -544,59 +507,19 @@
     </section>
   </div>
 
-  <!-- Upper Primary -->
   <section class="section" id="curr-upper">
-    <div class="sec-head">
-      <div class="sec-label">Primary 4 – 7</div>
-      <h2 class="sec-title">Upper Primary & PLE Preparation</h2>
-      <div class="gold-bar"></div>
-      <p class="sec-desc">A rigorous, exam-focused curriculum preparing pupils for the Primary Leaving Examination (PLE) and secondary school success.</p>
+    <div class="sec-head"><div class="sec-label">Primary 4 – 7</div><h2 class="sec-title">Upper Primary & PLE Preparation</h2><div class="red-bar"></div><p class="sec-desc">A rigorous, exam-focused curriculum preparing pupils for PLE and secondary school success.</p></div>
+    <div class="upper-subjects">
+      <div class="us-card"><div class="us-icon"><i class="ti ti-abc"></i></div><h4>English Language</h4><p>Advanced grammar, essay writing, comprehension, literature, and oral communication</p><span class="ple-badge">PLE Subject</span></div>
+      <div class="us-card"><div class="us-icon"><i class="ti ti-calculator"></i></div><h4>Mathematics</h4><p>Algebra, geometry, fractions, statistics, and intensive problem-solving practice</p><span class="ple-badge">PLE Subject</span></div>
+      <div class="us-card"><div class="us-icon"><i class="ti ti-atom"></i></div><h4>Science</h4><p>Biology, chemistry, physics concepts, experiments, and applied science</p><span class="ple-badge">PLE Subject</span></div>
+      <div class="us-card"><div class="us-icon"><i class="ti ti-map"></i></div><h4>Social Studies</h4><p>History, geography, civics, environment, and Uganda/East Africa in depth</p><span class="ple-badge">PLE Subject</span></div>
+      <div class="us-card"><div class="us-icon"><i class="ti ti-bible"></i></div><h4>CRE / IRE</h4><p>Christian or Islamic Religious Education — faith, ethics, and scripture</p></div>
+      <div class="us-card"><div class="us-icon"><i class="ti ti-device-laptop"></i></div><h4>ICT Literacy</h4><p>Computer skills, digital literacy, and technology for learning</p></div>
     </div>
-    <div class="upper-layout">
-      <div class="upper-subjects">
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-abc"></i></div>
-          <h4>English Language</h4>
-          <p>Advanced grammar, essay writing, comprehension, literature, and oral communication</p>
-          <span class="ple-badge">PLE Subject</span>
-        </div>
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-calculator"></i></div>
-          <h4>Mathematics</h4>
-          <p>Algebra, geometry, fractions, statistics, and intensive problem-solving practice</p>
-          <span class="ple-badge">PLE Subject</span>
-        </div>
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-atom"></i></div>
-          <h4>Science</h4>
-          <p>Biology, chemistry, physics concepts, experiments, and applied science</p>
-          <span class="ple-badge">PLE Subject</span>
-        </div>
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-map"></i></div>
-          <h4>Social Studies</h4>
-          <p>History, geography, civics, environment, and Uganda / East Africa in depth</p>
-          <span class="ple-badge">PLE Subject</span>
-        </div>
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-bible"></i></div>
-          <h4>CRE / IRE</h4>
-          <p>Christian or Islamic Religious Education — faith, ethics, and scripture</p>
-        </div>
-        <div class="us-card">
-          <div class="us-icon"><i class="ti ti-device-laptop"></i></div>
-          <h4>ICT Literacy</h4>
-          <p>Computer skills, digital literacy, and technology for learning</p>
-        </div>
-      </div>
-    </div>
-
     <div class="ple-prep-band">
       <div class="ple-prep-inner">
-        <div class="ple-prep-text">
-          <h3>P7 / PLE Preparation Programme</h3>
-          <p>Our P7 pupils receive intensive PLE preparation including past paper practice, mock examinations, revision timetables, and individual performance tracking — delivered by our most experienced teachers.</p>
-        </div>
+        <div class="ple-prep-text"><h3>P7 / PLE Preparation Programme</h3><p>Our P7 pupils receive intensive PLE preparation including past paper practice, mock examinations, revision timetables, and individual performance tracking — delivered by our most experienced teachers.</p></div>
         <div class="ple-stat-row">
           <div class="ple-stat"><span>98%</span>Pass Rate</div>
           <div class="ple-stat"><span>Top</span>Results</div>
@@ -606,18 +529,13 @@
     </div>
   </section>
 
-  <!-- Co-curricular -->
-  <div class="bg-off">
+  <div class="bg-off" style="padding:1px 0;">
     <section class="section" id="curr-cocurr">
-      <div class="sec-head">
-        <div class="sec-label">Beyond the Classroom</div>
-        <h2 class="sec-title">Co-Curricular Activities</h2>
-        <div class="gold-bar"></div>
-      </div>
+      <div class="sec-head"><div class="sec-label">Beyond the Classroom</div><h2 class="sec-title">Co-Curricular Activities</h2><div class="red-bar"></div></div>
       <div class="cocurr-grid">
         <div class="cc-card"><i class="ti ti-ball-football"></i><h4>Sports & Athletics</h4><p>Football, netball, athletics, volleyball — teamwork and fitness</p></div>
         <div class="cc-card"><i class="ti ti-music"></i><h4>Music, Dance & Drama</h4><p>Choir, cultural dance, drama festivals, and school performances</p></div>
-        <div class="cc-card"><i class="ti ti-messages"></i><h4>Debating Club</h4><p>All pupils participate — building communication, confidence, and critical thinking</p></div>
+        <div class="cc-card"><i class="ti ti-messages"></i><h4>Debating Club</h4><p>Communication, confidence, and critical thinking for all pupils</p></div>
         <div class="cc-card"><i class="ti ti-heart-handshake"></i><h4>Youth Alive Club</h4><p>Transforming the young generation into responsible, caring citizens</p></div>
         <div class="cc-card"><i class="ti ti-device-laptop"></i><h4>ICT Club</h4><p>Computer literacy, typing, and introductory coding</p></div>
         <div class="cc-card"><i class="ti ti-leaf"></i><h4>Environment Club</h4><p>Tree planting, gardening, and caring for God's creation</p></div>
@@ -626,106 +544,29 @@
       </div>
     </section>
   </div>
-</div><!-- /curriculum -->
+</div>
 
-
-<!-- ===== STAFF PAGE ===== -->
-<div id="page-staff" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#0d3b1e,#1a5c28);">
-    <h1>Our Staff</h1>
-    <p>The dedicated team behind Hidden Treasure's excellence</p>
-  </div>
-
-  <section class="section">
-    <div class="sec-head">
-      <div class="sec-label">School Leadership</div>
-      <h2 class="sec-title">Directors & Administration</h2>
-      <div class="gold-bar"></div>
-    </div>
-    <div class="directors-row">
-      <div class="director-card">
-        <div class="dir-avatar green-av">EN</div>
-        <div class="dir-body">
-          <h3>Eugene Nsamba</h3>
-          <div class="dir-role">Co-Founder & Director</div>
-          <p>Oversees school governance, strategic direction, and community partnerships. Committed to building an institution where faith and learning thrive together.</p>
-        </div>
-      </div>
-      <div class="director-card">
-        <div class="dir-avatar gold-av">FN</div>
-        <div class="dir-body">
-          <h3>Florence Nsamba</h3>
-          <div class="dir-role">Co-Founder & Director</div>
-          <p>Leads pastoral care, pupil welfare, and parent relations. Her nurturing approach ensures every child feels valued throughout their journey at Hidden Treasure.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="height:3rem;"></div>
-    <div class="sec-head">
-      <div class="sec-label">Teaching Team</div>
-      <h2 class="sec-title">Class Teachers</h2>
-      <div class="gold-bar"></div>
-    </div>
-
-    <div class="staff-grid">
-      <div class="staff-card"><div class="st-av sa1"></div><h4>Mr. Douglas</h4><div class="st-role">Head Teacher</div><div class="st-dept">Administration</div></div>
-      <div class="staff-card"><div class="st-av sa2"></div><h4></h4><div class="st-role">Deputy Head Teacher</div><div class="st-dept">Administration</div></div>
-      <div class="staff-card"><div class="st-av sa3"></div><h4></h4><div class="st-role">P7 Class Teacher</div><div class="st-dept">Mathematics & Science</div></div>
-      <div class="staff-card"><div class="st-av sa4"></div><h4></h4><div class="st-role">P6 Class Teacher</div><div class="st-dept">English & Literature</div></div>
-      <div class="staff-card"><div class="st-av sa5"></div><h4></h4><div class="st-role">P5 Class Teacher</div><div class="st-dept">Social Studies & CRE</div></div>
-      <div class="staff-card"><div class="st-av sa6"></div><h4></h4><div class="st-role">P4 Class Teacher</div><div class="st-dept">English & Mathematics</div></div>
-      <div class="staff-card"><div class="st-av sa1"></div><h4></h4><div class="st-role">P3 Class Teacher</div><div class="st-dept">Mathematics & Science</div></div>
-      <div class="staff-card"><div class="st-av sa2"></div><h4></h4><div class="st-role">P2 Class Teacher</div><div class="st-dept">Early Childhood</div></div>
-      <div class="staff-card"><div class="st-av sa3"></div><h4></h4><div class="st-role">P1 Class Teacher</div><div class="st-dept">Early Childhood</div></div>
-      <div class="staff-card"><div class="st-av sa4"></div><h4></h4><div class="st-role">Nursery Teacher</div><div class="st-dept">Early Childhood</div></div>
-    </div>
-
-    <div style="height:3rem;"></div>
-    <div class="sec-head">
-      <div class="sec-label">Support Team</div>
-      <h2 class="sec-title">Support & Specialist Staff</h2>
-      <div class="gold-bar"></div>
-    </div>
-    <div class="staff-grid">
-      <div class="staff-card"><div class="st-av sa5"></div><h4></h4><div class="st-role">Sports Coach</div><div class="st-dept">Physical Education</div></div>
-      <div class="staff-card"><div class="st-av sa6"></div><h4></h4><div class="st-role">Music Teacher</div><div class="st-dept">Music & Choir</div></div>
-      <div class="staff-card"><div class="st-av sa1"></div><h4></h4><div class="st-role">ICT Teacher</div><div class="st-dept">ICT Club</div></div>
-      <div class="staff-card"><div class="st-av sa2"></div><h4></h4><div class="st-role">School Nurse</div><div class="st-dept">Health & Welfare</div></div>
-      <div class="staff-card"><div class="st-av sa3"></div><h4></h4><div class="st-role">School Bursar</div><div class="st-dept">Finance & Accounts</div></div>
-      <div class="staff-card"><div class="st-av sa4"></div><h4></h4><div class="st-role">Secretary & Registrar</div><div class="st-dept">Administration</div></div>
-    </div>
-    <p style="font-size:13px; color:var(--text-muted); margin-top:1.5rem; font-style:italic; text-align:center;">* Staff names are sample placeholders. Replace with your actual team.</p>
-  </section>
-
-  <div class="motto-band">
-    <div class="motto-band-inner">
-      <blockquote>"Our teachers don't just teach subjects — they shape futures."<cite>— Hidden Treasure Primary School Maya</cite></blockquote>
-    </div>
-  </div>
-</div><!-- /staff -->
-
-
-<!-- ===== ADMISSIONS PAGE ===== -->
+<!-- ═══════════════════════════════════════════
+     ADMISSIONS PAGE
+═══════════════════════════════════════════ -->
 <div id="page-admissions" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#3a2200,#9a6300);">
+  <div class="page-hero page-hero-red">
     <h1>Admissions</h1>
-    <p>Secure your child's place at Hidden Treasure Primary School Maya</p>
+    <p>Secure your child's place at Hidden Treasure — Maya or Kamengo</p>
   </div>
   <section class="section">
     <div class="sec-head center">
       <div class="sec-label">Join Our Family</div>
       <h2 class="sec-title">How to Apply</h2>
-      <div class="gold-bar center-bar"></div>
-      <p class="sec-desc" style="margin:0 auto; text-align:center;">We welcome applications for all classes — Nursery through Primary Seven. Enrolment is open every term. Contact us early — spaces are limited!</p>
+      <div class="red-bar center-bar"></div>
+      <p class="sec-desc" style="margin:0 auto;">We welcome applications for all classes — Nursery through Primary Seven — at both our Maya and Kamengo branches. Enrolment is open every term. Contact us early — spaces are limited!</p>
     </div>
     <div class="steps-grid">
-      <div class="step-card"><div class="step-num">1</div><h3>Visit & Inquire</h3><p>Call or visit the school to learn about available spaces, the fee structure, and what makes Hidden Treasure special.</p></div>
-      <div class="step-card"><div class="step-num">2</div><h3>Submit Application</h3><p>Collect the admission form from our office, fill it in, attach the required documents, and submit to our registrar.</p></div>
+      <div class="step-card"><div class="step-num">1</div><h3>Choose Your Branch</h3><p>Decide whether your child will attend our Maya (Wakiso) or Kamengo (Mpigi) branch, then call or visit to confirm available spaces.</p></div>
+      <div class="step-card"><div class="step-num">2</div><h3>Submit Application</h3><p>Collect the admission form from the school office, fill it in, attach the required documents, and submit to our registrar.</p></div>
       <div class="step-card"><div class="step-num">3</div><h3>Assessment</h3><p>Your child attends a brief, friendly assessment to help us place them in the most appropriate class for their level.</p></div>
       <div class="step-card"><div class="step-num">4</div><h3>Enrolment</h3><p>Pay fees, collect the uniform list and booklist, and officially welcome your child to the Hidden Treasure family!</p></div>
     </div>
-
     <div class="adm-two-col">
       <div class="docs-box">
         <h4><i class="ti ti-checklist"></i> Required Documents</h4>
@@ -745,80 +586,95 @@
           <li>Term 2 — June to August</li>
           <li>Term 3 — September to December</li>
           <li>Enrolment open for all three terms</li>
-          <li>Early registration is strongly recommended</li>
+          <li>Early registration strongly recommended</li>
         </ul>
       </div>
     </div>
-    <div style="text-align:center; margin-top:2.5rem;">
+    <div style="text-align:center;margin-top:2.5rem;">
       <button class="btn-gold" onclick="showPage('contact')"><i class="ti ti-phone"></i> Contact Us to Apply</button>
     </div>
   </section>
-</div><!-- /admissions -->
+</div>
 
-
-<!-- ===== CONTACT PAGE ===== -->
+<!-- ═══════════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════════ -->
 <div id="page-contact" class="page">
-  <div class="page-hero" style="background:linear-gradient(135deg,#0d3b1e,#217332);">
+  <div class="page-hero">
     <h1>Contact Us</h1>
-    <p>We'd love to hear from you — visit us or send a message</p>
+    <p>Reach our Maya or Kamengo branch — we'd love to hear from you</p>
   </div>
   <section class="section">
     <div class="contact-layout">
-      <div class="contact-left">
-        <div class="sec-head">
-          <div class="sec-label">Get in Touch</div>
-          <h2 class="sec-title">Find Us</h2>
-          <div class="gold-bar"></div>
-        </div>
-        <div class="contact-cards">
+      <div>
+        <div class="sec-head"><div class="sec-label">Get in Touch</div><h2 class="sec-title">Find Us</h2><div class="red-bar"></div></div>
+
+        <p style="font-size:13px;font-weight:700;color:var(--blue-900);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;">Maya Branch — Wakiso</p>
+        <div class="contact-cards" style="margin-bottom:1.5rem;">
           <div class="ct-card"><i class="ti ti-map-pin"></i><div><strong>Location</strong><span>Maya, Wakiso District, Uganda</span></div></div>
           <div class="ct-card"><i class="ti ti-phone"></i><div><strong>Phone</strong><span>+256 700 000 000<br>+256 780 000 000</span></div></div>
-          <div class="ct-card"><i class="ti ti-mail"></i><div><strong>Email</strong><span>info@hiddentreasure.ac.ug</span></div></div>
+          <div class="ct-card"><i class="ti ti-mail"></i><div><strong>Email</strong><span>maya@hiddentreasure.ac.ug</span></div></div>
           <div class="ct-card"><i class="ti ti-clock"></i><div><strong>Hours</strong><span>Mon–Fri: 7:00 AM – 5:30 PM<br>Saturday: 8:00 AM – 1:00 PM</span></div></div>
         </div>
+
+        <p style="font-size:13px;font-weight:700;color:var(--blue-900);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;">Kamengo Branch — Mpigi</p>
+        <div class="contact-cards">
+          <div class="ct-card"><i class="ti ti-map-pin"></i><div><strong>Location</strong><span>Kamengo, Mpigi District, Uganda</span></div></div>
+          <div class="ct-card"><i class="ti ti-phone"></i><div><strong>Phone</strong><span>+256 700 000 000</span></div></div>
+          <div class="ct-card"><i class="ti ti-mail"></i><div><strong>Email</strong><span>kamengo@hiddentreasure.ac.ug</span></div></div>
+          <div class="ct-card"><i class="ti ti-clock"></i><div><strong>Hours</strong><span>Mon–Fri: 7:00 AM – 5:30 PM</span></div></div>
+        </div>
       </div>
-      <div class="contact-right">
-        <div class="form-box">
-          <h3>Send Us a Message</h3>
-          <form class="cform" onsubmit="handleForm(event)">
-            <div class="form-row2">
-              <div class="fg"><label>Parent / Guardian Name</label><input type="text" placeholder="e.g. John Ssali" required /></div>
-              <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+256 7XX XXX XXX" /></div>
-            </div>
-            <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" /></div>
-            <div class="fg"><label>Subject</label>
-              <select>
-                <option value="">Select a subject...</option>
-                <option>Admissions Inquiry</option>
-                <option>Fee Structure</option>
-                <option>Staff Vacancy</option>
-                <option>General Question</option>
-              </select>
-            </div>
-            <div class="fg"><label>Message</label><textarea placeholder="Write your message here..."></textarea></div>
-            <button type="submit" class="btn-gold"><i class="ti ti-send"></i> Send Message</button>
-          </form>
-          <div id="form-success" style="display:none;" class="form-ok">
-            <i class="ti ti-circle-check"></i> Thank you! Your message has been sent. We will be in touch shortly.
+
+      <div class="form-box">
+        <h3>Send Us a Message</h3>
+        <form class="cform" onsubmit="handleForm(event)">
+          <div class="form-row2">
+            <div class="fg"><label>Parent / Guardian Name</label><input type="text" placeholder="e.g. John Ssali" required /></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+256 7XX XXX XXX" /></div>
           </div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" /></div>
+          <div class="fg"><label>Branch</label>
+            <select>
+              <option value="">Select branch...</option>
+              <option>Maya — Wakiso District</option>
+              <option>Kamengo — Mpigi District</option>
+              <option>General / Both Branches</option>
+            </select>
+          </div>
+          <div class="fg"><label>Subject</label>
+            <select>
+              <option value="">Select a subject...</option>
+              <option>Admissions Inquiry</option>
+              <option>Fee Structure</option>
+              <option>Staff Vacancy</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="Write your message here..."></textarea></div>
+          <button type="submit" class="btn-gold"><i class="ti ti-send"></i> Send Message</button>
+        </form>
+        <div id="form-success" style="display:none;" class="form-ok">
+          <i class="ti ti-circle-check"></i> Thank you! Your message has been sent. We will be in touch shortly.
         </div>
       </div>
     </div>
   </section>
-</div><!-- /contact -->
+</div>
 
-
-<!-- ===== FOOTER ===== -->
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo-crest">HT</div>
         <div>
-          <div class="footer-school-name">Hidden Treasure Primary School Maya</div>
-          <div class="footer-motto">"With God everything is possible"</div>
-          <p class="footer-about">A faith-based day &amp; boarding nursery and primary school in Maya, Wakiso District — licensed by the Ministry of Education and an approved UNEB examination centre.</p>
-          <p style="font-size:12px; color:var(--green-200); margin-top:8px;">Directors: <strong style="color:var(--gold-300);">Eugene &amp; Florence Nsamba</strong></p>
+          <div class="footer-school-name">Hidden Treasure Children's Foundation</div>
+          <div class="footer-motto">Train up a child in the way he should go, and when he is old he will not depart from it. —Proverbs 22:6</div>
+          <p class="footer-about">A faith-based foundation operating two schools — Hidden Treasure Primary School Maya (Wakiso) and Treasured Generation School Kamengo (Mpigi) — licensed by the Ministry of Education and an approved UNEB examination centre.</p>
+          <p style="font-size:12px;color:var(--blue-200);margin-top:8px;">Directors: <strong style="color:var(--white);">Eugene & Florence Nsamba</strong></p>
         </div>
       </div>
       <div class="footer-col">
@@ -828,76 +684,77 @@
           <li onclick="showPage('about')">About Us</li>
           <li onclick="showPage('anthem')">School Anthem</li>
           <li onclick="showPage('curriculum')">Curriculum</li>
-          <li onclick="showPage('staff')">Our Staff</li>
           <li onclick="showPage('admissions')">Admissions</li>
           <li onclick="showPage('contact')">Contact</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Academics</h4>
+        <h4>Our Branches</h4>
         <ul>
-          <li onclick="showPage('curriculum')">Nursery Section</li>
+          <li><i class="ti ti-map-pin" style="font-size:13px;"></i> Maya, Wakiso District</li>
+          <li><i class="ti ti-map-pin" style="font-size:13px;"></i> Kamengo, Mpigi District</li>
+          <li style="margin-top:8px;" onclick="showPage('curriculum')">Nursery Section</li>
           <li onclick="showPage('curriculum')">Lower Primary (P1–P3)</li>
           <li onclick="showPage('curriculum')">Upper Primary (P4–P7)</li>
           <li onclick="showPage('curriculum')">PLE Preparation</li>
-          <li onclick="showPage('curriculum')">Co-Curricular Activities</li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
           <li><i class="ti ti-map-pin" style="font-size:13px;"></i> Maya, Wakiso District</li>
+          <li><i class="ti ti-map-pin" style="font-size:13px;"></i> Kamengo, Mpigi District</li>
           <li><i class="ti ti-phone" style="font-size:13px;"></i> +256 700 000 000</li>
           <li><i class="ti ti-mail" style="font-size:13px;"></i> info@hiddentreasure.ac.ug</li>
-          <li style="margin-top:8px; color:var(--gold-200);">Mon–Fri: 7:00 AM – 5:30 PM</li>
+          <li style="margin-top:8px;color:var(--red-200);">Mon–Fri: 7:00 AM – 5:30 PM</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <span>&copy; 2026 Hidden Treasure Primary School Maya. All rights reserved.</span>
-      <span>Built with <span style="color:var(--gold-400);">♥</span> for our community &amp; the glory of God.</span>
+      <span>&copy; 2026 Hidden Treasure Children's Foundation. All rights reserved.</span>
+      <span>Built with <span style="color:var(--red-400);">♥</span> for our community & the glory of God.</span>
     </div>
   </div>
 </footer>
 
 <script>
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const pg = document.getElementById('page-' + name);
-  if (pg) pg.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  document.querySelectorAll('.nav-item').forEach(a => a.classList.remove('active'));
-  const al = document.getElementById('nav-' + name);
-  if (al) al.classList.add('active');
-  document.getElementById('mainNav').classList.remove('open');
-}
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const pg = document.getElementById('page-' + name);
+    if (pg) pg.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelectorAll('.nav-item').forEach(a => a.classList.remove('active'));
+    const al = document.getElementById('nav-' + name);
+    if (al) al.classList.add('active');
+    document.getElementById('mainNav').classList.remove('open');
+  }
 
-function scrollTo(id) {
-  setTimeout(() => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 100);
-}
+  function scrollSec(id) {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
 
-document.getElementById('hamburger').addEventListener('click', function () {
-  document.getElementById('mainNav').classList.toggle('open');
-});
+  document.getElementById('hamburger').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
 
-window.addEventListener('scroll', function () {
-  const h = document.getElementById('siteHeader');
-  if (window.scrollY > 60) h.classList.add('scrolled');
-  else h.classList.remove('scrolled');
-});
+  window.addEventListener('scroll', function () {
+    const h = document.getElementById('siteHeader');
+    if (window.scrollY > 60) h.classList.add('scrolled');
+    else h.classList.remove('scrolled');
+  });
 
-function handleForm(e) {
-  e.preventDefault();
-  const s = document.getElementById('form-success');
-  s.style.display = 'flex';
-  e.target.reset();
-  setTimeout(() => s.style.display = 'none', 7000);
-}
+  function handleForm(e) {
+    e.preventDefault();
+    const s = document.getElementById('form-success');
+    s.style.display = 'flex';
+    e.target.reset();
+    setTimeout(() => s.style.display = 'none', 7000);
+  }
 </script>
 </body>
 </html>
